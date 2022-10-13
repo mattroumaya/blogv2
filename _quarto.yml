@@ -2,7 +2,8 @@ project:
   type: website
 
 website:
-  title: "blogv2"
+  title: "matt roumaya"
+  twitter-card: true
   navbar:
     right:
       - about.qmd

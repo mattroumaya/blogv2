@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.251">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Matt Roumaya">
+<meta name="dcterms.date" content="2020-07-25">
+
+<title>matt roumaya - doubleheadR</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+<script src="../../site_libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="../../site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="../../styles.css">
+<meta name="twitter:title" content="matt roumaya - doubleheadR">
+<meta name="twitter:description" content="The past few months of work-life have been constantly busy with survey design and analysis.">
+<meta name="twitter:card" content="summary">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">matt roumaya</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">About</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com"><i class="bi bi-twitter" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">doubleheadR</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">R</div>
+                <div class="quarto-category">survey</div>
+                <div class="quarto-category">SurveyMonkey</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Matt Roumaya </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">July 25, 2020</p>
+      </div>
+    </div>
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<p>The past few months of work-life have been constantly busy with survey design and analysis. COVID has really changed the landscape for just about everything, and leaders of projects and departments want and need to implement change quickly, and survey research is helping to inform speedy decision making.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="the_heads.jpg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">(From Luyi Wang’s <em>Reigning Heads</em>)</figcaption><p></p>
+</figure>
+</div>
+<p>I’m here to demo the first R package that I’ve ever written that has been helping me quickly clean and tidy data from SurveyMonkey to prepare for analysis and reporting. This is also a continuation of my previous post about <a href="https://www.mattroumaya.com/post/dealing-with-the-survey-monkey-doubleheader/">tidying the SurveyMonkey Double Header</a>.</p>
+<section id="background-info" class="level1">
+<h1>Background Info<br>
+</h1>
+<p><code>doubleheadr</code> will be useful if you:<br>
+* Download or inherit data from SurveyMonkey as <code>.xlsx</code> or <code>.csv</code><br>
+* Commonly find yourself struggling to quickly tidy the header and sub-header, and intuitively rename columns<br>
+* Are fed up with your current process for the two steps above and are looking for a new approach<br>
+</p>
+<p>Getting survey data ready for analysis shouldn’t take more than a few lines of code (if any!), and that has been my personal objective ever since I started using R for survey analysis, reporting, and dashboard creation.</p>
+<p>As a quick side note, if you have a SurveyMonkey account, you should absolutely check out <a href="https://github.com/tntp/surveymonkey">Sam Firke’s <code>surveymonkey</code> package</a>, which makes it super easy to pull data from SurveyMonkey’s API. One limitation is that the API is limited to 500 calls per day, (meaning you will max out with any survey having over 50k responses). It’s also common for analysts and data wranglers to inherit response files from other departments or clients, and that’s where <code>doubleheadr</code> can help out.</p>
+</section>
+<section id="doubleheadr-in-action" class="level1">
+<h1><code>doubleheadr</code> in Action</h1>
+<p>You’ll need <code>devtools</code> (to run <code>install_github()</code>), <code>tidyverse</code>, and <code>janitor</code> (also by Sam Firke) to run <code>doubleheadr</code>.</p>
+<section id="step-1-install-packages" class="level2">
+<h2 class="anchored" data-anchor-id="step-1-install-packages">Step 1: install packages</h2>
+<p>I’ll assume you are familiar with installing from GitHub, and I’m working on being more concise.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(devtools)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install_github</span>(<span class="st">'mattroumaya/doubleheadr'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="step-2-check-out-the-demo-file" class="level2">
+<h2 class="anchored" data-anchor-id="step-2-check-out-the-demo-file">Step 2: check out the demo file</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(doubleheadr)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>demo <span class="ot">&lt;-</span> doubleheadr<span class="sc">::</span>demo</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><code>doubleheadr</code> comes with a built-in demo data set, which helps illustrate the two functions available: <code>clean_headr</code> and <code>trim_headr</code>. The data set <code>demo</code> mimics a <code>.xlsx</code> export from SurveyMonkey and looks like this:</p>
+<div class="cell">
+<div class="cell-output-display">
+
+<table class="table table-striped table-hover table-condensed" style="font-size: 10px; width: auto !important; ">
+ <thead>
+  <tr>
+   <th style="text-align:right;background-color: pink !important;"> Respondent ID </th>
+   <th style="text-align:left;background-color: pink !important;"> Please provide your contact information: </th>
+   <th style="text-align:left;background-color: pink !important;"> ...3 </th>
+   <th style="text-align:left;background-color: pink !important;"> ...4 </th>
+   <th style="text-align:left;background-color: pink !important;"> ...5 </th>
+   <th style="text-align:left;background-color: pink !important;"> ...6 </th>
+   <th style="text-align:left;background-color: pink !important;"> ...7 </th>
+   <th style="text-align:left;background-color: pink !important;"> ...8 </th>
+   <th style="text-align:left;background-color: pink !important;"> ...9 </th>
+   <th style="text-align:left;background-color: pink !important;"> ...10 </th>
+   <th style="text-align:left;background-color: pink !important;"> ...11 </th>
+   <th style="text-align:left;background-color: pink !important;"> I wish it would have snowed more this winter. </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:right;background-color: pink !important;"> NA </td>
+   <td style="text-align:left;background-color: pink !important;"> Name </td>
+   <td style="text-align:left;background-color: pink !important;"> Company </td>
+   <td style="text-align:left;background-color: pink !important;"> Address </td>
+   <td style="text-align:left;background-color: pink !important;"> Address 2 </td>
+   <td style="text-align:left;background-color: pink !important;"> City/Town </td>
+   <td style="text-align:left;background-color: pink !important;"> State/Province </td>
+   <td style="text-align:left;background-color: pink !important;"> ZIP/Postal Code </td>
+   <td style="text-align:left;background-color: pink !important;"> Country </td>
+   <td style="text-align:left;background-color: pink !important;"> Email Address </td>
+   <td style="text-align:left;background-color: pink !important;"> Phone Number </td>
+   <td style="text-align:left;background-color: pink !important;"> Response </td>
+  </tr>
+  <tr>
+   <td style="text-align:right;"> 11385284375 </td>
+   <td style="text-align:left;"> Benjamin Franklin </td>
+   <td style="text-align:left;"> Poor Richard's </td>
+   <td style="text-align:left;"> NA </td>
+   <td style="text-align:left;"> NA </td>
+   <td style="text-align:left;"> Philadelphia </td>
+   <td style="text-align:left;"> PA </td>
+   <td style="text-align:left;"> 19104 </td>
+   <td style="text-align:left;"> NA </td>
+   <td style="text-align:left;"> benjamins@gmail.com </td>
+   <td style="text-align:left;"> 215-555-4444 </td>
+   <td style="text-align:left;"> Strongly disagree </td>
+  </tr>
+  <tr>
+   <td style="text-align:right;"> 11385273621 </td>
+   <td style="text-align:left;"> Mae Jemison </td>
+   <td style="text-align:left;"> NASA </td>
+   <td style="text-align:left;"> NA </td>
+   <td style="text-align:left;"> NA </td>
+   <td style="text-align:left;"> Decatur </td>
+   <td style="text-align:left;"> Alabama </td>
+   <td style="text-align:left;"> 20104 </td>
+   <td style="text-align:left;"> NA </td>
+   <td style="text-align:left;"> mjemison@nasa.gov </td>
+   <td style="text-align:left;"> 221-134-4646 </td>
+   <td style="text-align:left;"> Strongly agree </td>
+  </tr>
+  <tr>
+   <td style="text-align:right;"> 11385258069 </td>
+   <td style="text-align:left;"> Carl Sagan </td>
+   <td style="text-align:left;"> Smithsonian </td>
+   <td style="text-align:left;"> NA </td>
+   <td style="text-align:left;"> NA </td>
+   <td style="text-align:left;"> Washington </td>
+   <td style="text-align:left;"> D.C. </td>
+   <td style="text-align:left;"> 33321 </td>
+   <td style="text-align:left;"> NA </td>
+   <td style="text-align:left;"> stargazer@gmail.com </td>
+   <td style="text-align:left;"> 999-999-4422 </td>
+   <td style="text-align:left;"> Neither agree nor disagree </td>
+  </tr>
+</tbody>
+</table>
+
+</div>
+</div>
+<p>As analyzers of this data, we will want to paste the column names and values in the first row together. It’s a bit more complicated than that, which is detailed in my previous post, but we’re being concise here.</p>
+</section>
+<section id="step-3-clean_headr" class="level2">
+<h2 class="anchored" data-anchor-id="step-3-clean_headr">Step 3: <code>clean_headr</code></h2>
+<p>We can call <code>clean_headr</code> on our <code>data.frame</code> or <code>tibble</code> object, which takes three arguments:<br>
+* <code>dat</code>: a <code>data.frame</code> object (in this case, inherited from LHS)<br>
+* <code>rep_val</code>: the repeated value as a character string. Our column names have a repeated value of ‘…’ (or ‘..’, or ‘.’)<br>
+* <code>clean_names</code>: this is a <code>janitor</code> function that will convert all column names to snake_case and will strip out any non-alphanumeric characters.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>demo <span class="sc">%&gt;%</span> </span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">clean_headr</span>(<span class="at">rep_val =</span> <span class="st">'...'</span>, <span class="at">clean_names =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">colnames</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "respondent_id"                                          
+ [2] "please_provide_your_contact_information_name"           
+ [3] "please_provide_your_contact_information_company"        
+ [4] "please_provide_your_contact_information_address"        
+ [5] "please_provide_your_contact_information_address_2"      
+ [6] "please_provide_your_contact_information_city_town"      
+ [7] "please_provide_your_contact_information_state_province" 
+ [8] "please_provide_your_contact_information_zip_postal_code"
+ [9] "please_provide_your_contact_information_country"        
+[10] "please_provide_your_contact_information_email_address"  
+[11] "please_provide_your_contact_information_phone_number"   
+[12] "i_wish_it_would_have_snowed_more_this_winter_response"  </code></pre>
+</div>
+</div>
+<p>We can compare this with <code>clean_names = FALSE</code>, which creates column names that are very similar to the actual survey questions that we’ve asked.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>demo <span class="sc">%&gt;%</span> </span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">clean_headr</span>(<span class="at">rep_val =</span> <span class="st">'...'</span>, <span class="at">clean_names =</span> <span class="cn">FALSE</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">colnames</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "Respondent ID"                                           
+ [2] "Please provide your contact information: Name"           
+ [3] "Please provide your contact information: Company"        
+ [4] "Please provide your contact information: Address"        
+ [5] "Please provide your contact information: Address 2"      
+ [6] "Please provide your contact information: City/Town"      
+ [7] "Please provide your contact information: State/Province" 
+ [8] "Please provide your contact information: ZIP/Postal Code"
+ [9] "Please provide your contact information: Country"        
+[10] "Please provide your contact information: Email Address"  
+[11] "Please provide your contact information: Phone Number"   
+[12] "I wish it would have snowed more this winter. Response"  </code></pre>
+</div>
+</div>
+</section>
+<section id="step-4-trim_headr" class="level2">
+<h2 class="anchored" data-anchor-id="step-4-trim_headr">Step 4: <code>trim_headr</code></h2>
+<p>Whether we use <code>clean_names</code> or not, we will most likely want to shorten some of the column names so that our code is more legible. The demo data here is pretty conservative - if you have a verbose survey question, you can imagine how long your column names could be!<br>
+</p>
+<p><code>trim_headr</code> makes it easy to shorten column names, and is really just composed of a concatenated <code>gsub</code> call on all of the column names. Let’s say we do use <code>clean_names</code> and we want to remove “please_provide_your_contact_” from our column names, so that we will still be left with shorter, descriptive names like <code>information_name</code>, <code>information_company</code>, etc. Let’s also shorten our last column name to <code>snowed_more_this_winter</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>demo <span class="sc">%&gt;%</span> </span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">clean_headr</span>(<span class="at">rep_val =</span> <span class="st">'...'</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">trim_headr</span>(<span class="fu">c</span>(<span class="st">'please_provide_your_contact_'</span>, <span class="st">'i_wish_it_would_have_'</span>, <span class="st">'_response'</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">colnames</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "respondent_id"               "information_name"           
+ [3] "information_company"         "information_address"        
+ [5] "information_address_2"       "information_city_town"      
+ [7] "information_state_province"  "information_zip_postal_code"
+ [9] "information_country"         "information_email_address"  
+[11] "information_phone_number"    "snowed_more_this_winter"    </code></pre>
+</div>
+</div>
+<p>Easy! Depending on the number of survey questions, getting to this point could take a really long time by first manually renaming columns and then deleting the first row. I’ve found this workflow to be more intuitive, and leaves me more time to focus on the data and creating effective dashboards and reports.</p>
+<p>If you happen to try out <code>doubleheadr</code> and find it helpful, or more likely, find some bugs or inefficiencies, I would love to hear about it!</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

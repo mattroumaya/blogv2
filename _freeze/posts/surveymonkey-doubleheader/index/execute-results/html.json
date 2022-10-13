@@ -1,0 +1,14 @@
+{
+  "hash": "8ff5fd2eaa721155648501c7aca0d772",
+  "result": {
+    "markdown": "---\ntitle: \"Post With Code\"\nauthor: \"Matt Roumaya\"\ndate: \"2022-10-11\"\ncategories: [survey, surveymonkey]\nimage: \"image.jpg\"\n---\n\n\nSurveyMonkey 🐒 is a popular online survey development software that outputs a very frustrating kind of response file.  If you've ever received exported results from SurveyMonkey, you probably know what I'm talking about. \n\nWhen response data is exported as a *.csv* or *.xlsx* file, it looks something like this: ",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

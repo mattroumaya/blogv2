@@ -6,14 +6,13 @@ about:
   links:
     - icon: twitter
       text: Twitter
-      href: https://twitter.com
+      href: https://twitter.com/bigantsaresmall
     - icon: linkedin
       text: LinkedIn
-      href: https://linkedin.com
+      href: https://linkedin.com/in/mattroumaya
     - icon: github
       text: Github
-      href: https://github.com
-
+      href: https://github.com/mattroumaya
 ---
 
-About this blog
+I'm a Data Solutions Engineer \@ [Atorus](https://www.atorusresearch.com/). My goal is to share trivial and occasionally useful R content, learn from and connect with others in the data community, and contribute to open source. I live in Philadelphia with my amazing wife Molly, our two cats, Mango and Phil, and our dog Donut. As a huge fan of heavy music, I also run [phillymetal.net](https://phillymetal.net/ "link to phillymetal.net"), a website that helps people in the Philadelphia area find metal shows 🤘.

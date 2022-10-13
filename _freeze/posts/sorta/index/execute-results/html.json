@@ -1,0 +1,14 @@
+{
+  "hash": "c1906ebdc63863c09a16fb841035ab78",
+  "result": {
+    "markdown": "---\ntitle: \"A Sort(a) Useful Trick\"\nauthor: \"Matt Roumaya\"\ndate: \"2022-03-05\"\ncategories: [R, snippet]\n---\n\n\nMy blog is depressingly stagnant and I want to make more of an effort to just post things without putting too much thought into it. \n\nFor that reason, this post will be **extremely** brief, and will just show a useful trick that uses `dput()`, which was unfamiliar to me until I started looking for ways to contribute to the `R` tag on [stackoverflow](https://stackoverflow.com/users/12967938/matt). \n\nHere's the sort(a)-scenario:\n\nLet's say you have a vector that's built into your code that you'd like to sort. I've been stuck on an idea for a blog post about [Saves the Day](https://www.youtube.com/watch?v=NwW0q65VIas), and have a vector that contains body parts.\n\n\n::: {.cell}\n\n```{.r .cell-code}\nparts <- c(\"neck\", \"collarbone\", \"ankle\", \"thigh\", \"eyelid\")\n```\n:::\n\n\n\nI like order in the world, and want to build this vector alphabetically, which will also make it easier to read as it's presented in a blog post. \n\nInstead of doing your A-B-C's and manually rewriting the vector, just use `dput()`!\n\n\n::: {.cell}\n\n```{.r .cell-code}\ndput(sort(parts))\n```\n\n::: {.cell-output .cell-output-stdout}\n```\nc(\"ankle\", \"collarbone\", \"eyelid\", \"neck\", \"thigh\")\n```\n:::\n:::\n\n\nEasy! \n\nNow we can just copy/paste and move on with our lives! \n\n\n::: {.cell}\n\n```{.r .cell-code}\nordered_parts <- c(\"ankle\", \"collarbone\", \"eyelid\", \"neck\", \"thigh\")\n```\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

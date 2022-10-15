@@ -1,0 +1,11 @@
+---
+title: "phillymetal.net"
+categories: [javascript, website]
+---
+[phillymetal.net](www.phillymetal.net) is a website that lists metal, hardcore, punk, and heavy music shows in the Philadelphia area. Launched in April 2022.
+
+As a fan of heavy music and wanting to learn JavaScript, this site is built with mostly vanilla JS, HTML, and CSS, with a backend 
+
+[![](/inst/img/projects/phillymetal.png){fig-alt="phillymetal.net logo"}](www.phillymetal.net)
+
+

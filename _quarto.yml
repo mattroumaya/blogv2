@@ -7,14 +7,20 @@ website:
   navbar:
     right:
       - about.qmd
+      - projects.qmd
       - icon: github
         href: https://github.com/mattroumaya
       - icon: twitter
         href: https://twitter.com/bigantsaresmall
+      - icon: linkedin
+        href: https://www.linkedin.com/in/mattroumaya
 format:
   html:
     theme: cosmo
     css: styles.css
+    toc: true
+    metadata:
+      pagetitle: "matt roumaya"
 
 editor: visual
 

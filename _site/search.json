@@ -25,7 +25,7 @@
     "href": "index.html",
     "title": "blog",
     "section": "",
-    "text": "A Sort(a) Useful Trick\n\n\n\n\n\n\n\nR\n\n\nsnippet\n\n\n\n\n\n\n\n\n\n\n\nMar 5, 2022\n\n\nMatt Roumaya\n\n\n\n\n\n\n  \n\n\n\n\nUsing {foreach} to Speed up Parameterized RMarkdown PDF Report\n\n\n\n\n\n\n\nR\n\n\nreporting\n\n\nRMarkdown\n\n\nMicrosoft Access\n\n\n\n\n\n\n\n\n\n\n\nJul 9, 2021\n\n\nMatt Roumaya\n\n\n\n\n\n\n  \n\n\n\n\n52 Different Ways to Rename a Column in R\n\n\n\n\n\n\n\nR\n\n\ncats\n\n\n\n\n\n\n\n\n\n\n\nFeb 15, 2021\n\n\nMatt Roumaya\n\n\n\n\n\n\n  \n\n\n\n\ndoubleheadR\n\n\n\n\n\n\n\nR\n\n\nsurvey\n\n\nSurveyMonkey\n\n\n\n\n\n\n\n\n\n\n\nJul 25, 2020\n\n\nMatt Roumaya\n\n\n\n\n\n\n  \n\n\n\n\nTidying The Survey Monkey Doubleheader\n\n\n\n\n\n\n\nR\n\n\nsurvey\n\n\nSurveyMonkey\n\n\n\n\n\n\n\n\n\n\n\nMay 2, 2020\n\n\nMatt Roumaya\n\n\n\n\n\n\n  \n\n\n\n\nInfinite Rummy in the Age of Quarantine\n\n\n\n\n\n\n\nR\n\n\ndataviz\n\n\ncats\n\n\n\n\n\n\n\n\n\n\n\nApr 26, 2020\n\n\nMatt Roumaya\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nR\n\n\nsnippet\n\n\n\n\n\n\n\n\n\n\n\nMar 5, 2022\n\n\nMatt Roumaya\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nR\n\n\nreporting\n\n\nRMarkdown\n\n\nMicrosoft Access\n\n\n\n\n\n\n\n\n\n\n\nJul 9, 2021\n\n\nMatt Roumaya\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nR\n\n\ncats\n\n\n\n\n\n\n\n\n\n\n\nFeb 15, 2021\n\n\nMatt Roumaya\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nR\n\n\nsurvey\n\n\nSurveyMonkey\n\n\n\n\n\n\n\n\n\n\n\nJul 25, 2020\n\n\nMatt Roumaya\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nR\n\n\nsurvey\n\n\nSurveyMonkey\n\n\n\n\n\n\n\n\n\n\n\nMay 2, 2020\n\n\nMatt Roumaya\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nR\n\n\ndataviz\n\n\ncats\n\n\n\n\n\n\n\n\n\n\n\nApr 26, 2020\n\n\nMatt Roumaya\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/surveymonkey-doubleheader/index.html",
@@ -124,5 +124,33 @@
     "title": "A Sort(a) Useful Trick",
     "section": "",
     "text": "For that reason, this post will be extremely brief, and will just show a useful trick that uses dput(), which was unfamiliar to me until I started looking for ways to contribute to the R tag on stackoverflow.\nHere’s the sort(a)-scenario:\nLet’s say you have a vector that’s built into your code that you’d like to sort. I’ve been stuck on an idea for a blog post about Saves the Day, and have a vector that contains body parts.\n\nparts <- c(\"neck\", \"collarbone\", \"ankle\", \"thigh\", \"eyelid\")\n\nI like order in the world, and want to build this vector alphabetically, which will also make it easier to read as it’s presented in a blog post.\nInstead of doing your A-B-C’s and manually rewriting the vector, just use dput()!\n\ndput(sort(parts))\n\nc(\"ankle\", \"collarbone\", \"eyelid\", \"neck\", \"thigh\")\n\n\nEasy!\nNow we can just copy/paste and move on with our lives!\n\nordered_parts <- c(\"ankle\", \"collarbone\", \"eyelid\", \"neck\", \"thigh\")"
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "No matching items"
+  },
+  {
+    "objectID": "projects/phillymetal.html",
+    "href": "projects/phillymetal.html",
+    "title": "phillymetal.net",
+    "section": "",
+    "text": "As a fan of heavy music and wanting to learn JavaScript, this site is built with mostly vanilla JS, HTML, and CSS, with a backend"
+  },
+  {
+    "objectID": "projects/surveymonkey.html",
+    "href": "projects/surveymonkey.html",
+    "title": "surveymonkey R Package",
+    "section": "",
+    "text": "I inherited the surveymonkey R package from Sam Firke (formerly at TNTP) and have maintained the package since 2021. The surveymonkey package lets R users query the SurveyMonkey API directly to bring survey responses into R for quick and easy analysis."
+  },
+  {
+    "objectID": "projects/nuforcbot.html",
+    "href": "projects/nuforcbot.html",
+    "title": "nuforcbot",
+    "section": "",
+    "text": "Nuforcbot is a Twitter bot that scrapes NUFORC’s publicly available data and tweets about it. Everything runs off of R and GitHub Actions to automate a tweet every hour. The GitHub repo can be found here."
   }
 ]

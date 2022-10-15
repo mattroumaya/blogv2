@@ -1,0 +1,8 @@
+---
+title: "nuforcbot"
+categories: [R, Twitter bot, UFOs]
+---
+
+Nuforcbot is a [Twitter bot](https://twitter.com/nuforcbot) that scrapes NUFORC's publicly available data and tweets about it. Everything runs off of R and GitHub Actions to automate a tweet every hour. The GitHub repo can be found [here](https://github.com/mattroumaya/mufonbot).
+
+![](/inst/img/projects/aliens.jpeg){fig-alt="image of many green aliens"}

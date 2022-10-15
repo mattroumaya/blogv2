@@ -1,5 +1,14 @@
 /* css styles */
 
+/* pink: #D4A0A7 
+   gray: #6D8EA0
+   greenish black: #182825 */
+   
+* {
+  font-family: monospace;
+  font-size: 16px;ß
+}
+
 .navbar {
   background: #6D8EA0;
 }
@@ -10,4 +19,13 @@
 
 .quarto-listing-category-title {
   color: #182825;
+}
+
+.listing-category:hover {
+  background-color: #D4A0A7;
+  transition-delay: 0.1s;
+}
+
+.category:hover {
+  color: #D4A0A7;
 }

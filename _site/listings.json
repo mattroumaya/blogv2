@@ -9,5 +9,13 @@
       "/posts/dealing-with-doubleheadr/index.html",
       "/posts/rummy/index.html"
     ]
+  },
+  {
+    "listing": "/projects.html",
+    "items": [
+      "/projects/nuforcbot.html",
+      "/projects/phillymetal.html",
+      "/projects/surveymonkey.html"
+    ]
   }
 ]

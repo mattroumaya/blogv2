@@ -2,8 +2,7 @@
 title: "surveymonkey R Package"
 categories: [R, R package, open source]
 ---
+
 I inherited the [surveymonkey R package](https://github.com/mattroumaya/surveymonkey) from Sam Firke (formerly at [TNTP](https://tntp.org/)) and have maintained the package since 2021. The surveymonkey package lets R users query the SurveyMonkey API directly to bring survey responses into R for quick and easy analysis.
 
 [![](/inst/img/projects/surveymonkey.png){fig-alt="surveymonkey.com logo" fig-align="center"}](https://github.com/mattroumaya/surveymonkey)
-
-

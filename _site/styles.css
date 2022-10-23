@@ -4,21 +4,57 @@
    gray: #6D8EA0
    greenish black: #182825 */
    
+@import url("https://fonts.googleapis.com/css?family=Rubik+Beastly");
+@import url("https://fonts.googleapis.com/css?family=Red+Hat+Mono");
+
+:root {
+  --header-font: 'Rubik Beastly';
+  --main-font: 'Red Hat Mono';
+  --beige: #010101;
+  --gray: #485B63;
+}
+
+.navbar-title {
+  font-family: var(--header-font);
+  font-size: 24pt;
+  color: #010101; /* black */
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #010101;
+}
+
+.navbar #quarto-search.type-overlay .aa-Autocomplete svg.aa-SubmitIcon {
+  color: #010101;
+}
+   
 * {
-  font-family: monospace;
-  font-size: 16px;ß
+  font-family: var(--main-font);
+  font-size: 16px;
+  color: #010101;
+}
+
+body {
+    background-color: #686868;
 }
 
 .navbar {
-  background: #6D8EA0;
+  background: #686868; /* gray */
 }
 
 .quarto-title-banner {
-  background: #182825;
+  background: #686868;
 }
 
+
+
 .quarto-listing-category-title {
-  color: #182825;
+  color: #686868;
+}
+
+div.quarto-post .listing-categories .listing-category{
+  background-color: black;
+  color: white;
 }
 
 .listing-category:hover {
@@ -29,3 +65,20 @@
 .category:hover {
   color: #D4A0A7;
 }
+
+.card-body .post-contents {
+  color: white;
+}
+
+.quarto-grid-item div.post-contents {
+  background-color: #010101;
+}
+
+.about-link:hover {
+  color: green;
+}
+
+.card-text {
+  color: white;
+}
+

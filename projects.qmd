@@ -1,7 +1,6 @@
 ---
-title: "Projects"
+title: "projects"
 listing:
   contents: projects
   type: grid
 ---
-

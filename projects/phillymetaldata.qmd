@@ -3,10 +3,10 @@ title: "phillymetaldata R Package"
 categories: [R, R package, open source]
 ---
 
-The [`{phillymetaldata}`](https://github.com/mattroumaya/phillymetaldata) R package lets R users download all data that was ever listed on [phillymetal.net](www.phillymetal.net).
+The [`{phillymetaldata}`](https://github.com/mattroumaya/phillymetaldata) R package lets R users download all data for heavy music shows that has ever been listed on [phillymetal.net](www.phillymetal.net).
 
 If your R sessions aren't metal enough, look no further. 🤘
 
-This package uses the [supabase API](https://supabase.com/) to pull data directly from the source.
+This package uses the [supabase API](https://supabase.com/) to pull data directly from the source, so real-time data is always available.
 
 [![](/inst/img/projects/phillymetaldata.png){fig-alt="phillymetaldata hex image for R package" fig-align="center" width="300"}](https://github.com/mattroumaya/phillymetaldata)

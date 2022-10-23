@@ -1,0 +1,4 @@
+- source: project
+  netlify:
+    - id: ea8c0e49-df9c-48eb-bf5e-dcf6dcc0d339
+      url: 'https://grand-lamington-a32144.netlify.app'

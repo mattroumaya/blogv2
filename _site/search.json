@@ -95,7 +95,7 @@
     "href": "projects/phillymetaldata.html",
     "title": "phillymetaldata R Package",
     "section": "",
-    "text": "If your R sessions aren’t metal enough, look no further. 🤘\nThis package uses the supabase API to pull data directly from the source."
+    "text": "If your R sessions aren’t metal enough, look no further. 🤘\nThis package uses the supabase API to pull data directly from the source, so real-time data is always available."
   },
   {
     "objectID": "projects/phillymetal.html",

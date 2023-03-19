@@ -4,13 +4,33 @@
    gray: #6D8EA0
    greenish black: #182825 */
    
+@import url("https://fonts.googleapis.com/css?family=Rubik+Beastly");
+
+@import url("https://fonts.googleapis.com/css?family=Red+Hat+Mono");
+
+:root {
+  --header-font: "Rubik Beastly";
+
+  --main-font: "Red Hat Mono";
+
+  --beige: #010101;
+
+  --gray: #485b63;
+}
+   
 * {
   font-family: monospace;
-  font-size: 16px;ß
+  font-size: 16px;
 }
 
 .navbar {
   background: #6D8EA0;
+}
+
+.navbar-title {
+    font-family: var(--header-font);
+    font-size: 24pt;
+    color: #010101;
 }
 
 .quarto-title-banner {
@@ -29,3 +49,4 @@
 .category:hover {
   color: #D4A0A7;
 }
+

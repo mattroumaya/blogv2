@@ -6,9 +6,15 @@ categories: [R, NUFORC, UFO]
 image: "main.png"
 ---
 
-Recently, the Very Smart Guy who owns Twitter pulled the plug on API access for a wide range of developers, including [NUFORC Bot](https://twitter.com/nuforcbot?lang=en), which was built using R and GitHub Actions (repo is [here](https://github.com/mattroumaya/mufonbot)). (For some reason, NUFORC Bot is now back up and running, but it seems like it will be short-lived.)
+# NUFORC Bot
 
-I've been a subscriber to [**hrbrmstr's Daily Drop**](https://dailyfinds.hrbrmstr.dev/)for a while, and have been seeing some super interesting Observable notebooks but never took the leap to explore them more. The impending demise of NUFORC bot was as good an excuse as any to hack together an Observable notebook that can do everything that NUFORC Bot did + MORE 👽.
+NUFORC Bot is/was a Twitter bot that scrapes UFO sightings data from the [NUFORC Data Bank](https://armoxon.substack.com/p/the-worlds-smartest-man-doesnt-want) and tweets out a summary (and image if one was provided). The bot has \~700 followers and not much engagement, but it has definitely been a fun way to learn about web scraping, bot building, and CRON jobs via GitHub Actions (repo is [here](https://github.com/mattroumaya/mufonbot)).
+
+Recently, the [World's Smartest Man](https://armoxon.substack.com/p/the-worlds-smartest-man-doesnt-want) pulled the plug on Twitter's API access for a wide range of developers, including [NUFORC Bot](https://twitter.com/nuforcbot?lang=en). For some reason, NUFORC Bot is now back up and running, but it seems like it will be short-lived.
+
+After the hostile takeover, I stopped using my personal account on Twitter, deleted the app, and planned to just let NUFORC Bot ride off into the sunset. Now that the sunset is quickly approaching, I've been trying to think of a way to reproduce a similar effect to the tweet using the data I have already collected.
+
+Having been a subscriber to [**hrbrmstr's Daily Drop**](https://dailyfinds.hrbrmstr.dev/)for a while, I've seen a ton of amazing Observable notebooks, and thought that this could be a fun project to learn Observable and see . The impending demise of NUFORC Bot was as good an excuse as any to hack together an Observable notebook that can do everything that NUFORC Bot did + MORE 👽.
 
 ```{ojs}
 

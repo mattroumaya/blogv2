@@ -1,28 +1,15 @@
-/* css styles */
-
-/* pink: #D4A0A7 
-   gray: #6D8EA0
-   greenish black: #182825 */
-   
-@import url("https://fonts.googleapis.com/css?family=Rubik+Beastly");
-
-@import url("https://fonts.googleapis.com/css?family=Red+Hat+Mono");
+@import url("https://fonts.googleapis.com/css?family=Rubik+Beastly|Red+Hat+Mono");
 
 :root {
   --header-font: "Rubik Beastly";
-
   --main-font: "Red Hat Mono";
-
   --beige: #010101;
-
   --gray: #485b63;
-  
   --hover-yellow: #FFDB58;
 }
-   
+
 * {
-  font-family: monospace;
-  font-size: 16px;
+  font: 16px/1 monospace;
 }
 
 .navbar {
@@ -30,12 +17,9 @@
 }
 
 .navbar-title {
-    font-family: var(--header-font);
-    font-size: 24pt;
-    color: #010101;
+  font: 24pt/1 var(--header-font);
+  color: var(--beige);
 }
-
-
 
 .quarto-listing-category-title {
   color: var(--hover-yellow);
@@ -51,22 +35,52 @@
 }
 
 .menu-text {
-  color: #010101;
+  color: var(--beige);
 }
 
-.menu-text:active {
-  font-weight: bold;
-}
-
+.menu-text:active,
 .menu-text:hover {
+  font-weight: bold;
   color: var(--hover-yellow);
 }
 
 .nav-link {
-  color: #010101;
+  color: var(--beige);
 }
 
 .nav-link:active {
-  color: #010101;
+  color: var(--beige);
 }
+
+i.bi {
+  display: inline-block;
+  transition: transform 0.3s ease-out; /* add a transition effect */
+}
+
+i.bi:hover {
+  transform: scale(1.2);
+  z-index: 1; /* bring the element to the front */
+  position: relative; /* set a relative position to enable z-index */
+  color: var(--hover-yellow);
+}
+
+.navbar-toggler-icon {
+  display: inline-block;
+  transition: transform 0.3s ease-out;
+}
+
+.navbar-toggler-icon:hover {
+  transform: scale(1.2);
+}
+.aa-DetachedSearchButton {
+  display: inline-block;
+  transition: transform 0.3s ease-out;
+}
+
+.aa-DetachedSearchButton:hover {
+  transform: scale(1.2);
+  color: var(--hover-yellow)
+}
+
+
 

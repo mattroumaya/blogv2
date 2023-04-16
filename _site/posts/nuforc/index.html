@@ -194,7 +194,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#nuforc-bot" id="toc-nuforc-bot" class="nav-link active" data-scroll-target="#nuforc-bot">NUFORC Bot</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -202,14 +208,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<p>Recently, the Very Smart Guy who owns Twitter pulled the plug on API access for a wide range of developers, including <a href="https://twitter.com/nuforcbot?lang=en">NUFORC Bot</a>, which was built using R and GitHub Actions (repo is <a href="https://github.com/mattroumaya/mufonbot">here</a>). (For some reason, NUFORC Bot is now back up and running, but it seems like it will be short-lived.)</p>
-<p>I’ve been a subscriber to <a href="https://dailyfinds.hrbrmstr.dev/"><strong>hrbrmstr’s Daily Drop</strong></a>for a while, and have been seeing some super interesting Observable notebooks but never took the leap to explore them more. The impending demise of NUFORC bot was as good an excuse as any to hack together an Observable notebook that can do everything that NUFORC Bot did + MORE 👽.</p>
+<section id="nuforc-bot" class="level1">
+<h1>NUFORC Bot</h1>
+<p>NUFORC Bot is/was a Twitter bot that scrapes UFO sightings data from the <a href="https://armoxon.substack.com/p/the-worlds-smartest-man-doesnt-want">NUFORC Data Bank</a> and tweets out a summary (and image if one was provided). The bot has ~700 followers and not much engagement, but it has definitely been a fun way to learn about web scraping, bot building, and CRON jobs via GitHub Actions (repo is <a href="https://github.com/mattroumaya/mufonbot">here</a>).</p>
+<p>Recently, the <a href="https://armoxon.substack.com/p/the-worlds-smartest-man-doesnt-want">World’s Smartest Man</a> pulled the plug on Twitter’s API access for a wide range of developers, including <a href="https://twitter.com/nuforcbot?lang=en">NUFORC Bot</a>. For some reason, NUFORC Bot is now back up and running, but it seems like it will be short-lived.</p>
+<p>After the hostile takeover, I stopped using my personal account on Twitter, deleted the app, and planned to just let NUFORC Bot ride off into the sunset. Now that the sunset is quickly approaching, I’ve been trying to think of a way to reproduce a similar effect to the tweet using the data I have already collected.</p>
+<p>Having been a subscriber to <a href="https://dailyfinds.hrbrmstr.dev/"><strong>hrbrmstr’s Daily Drop</strong></a>for a while, I’ve seen a ton of amazing Observable notebooks, and thought that this could be a fun project to learn Observable and see . The impending demise of NUFORC Bot was as good an excuse as any to hack together an Observable notebook that can do everything that NUFORC Bot did + MORE 👽.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1" data-startfrom="15" data-source-offset="-1"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 14;"><span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> { selectRandom<span class="op">,</span> addHeader } <span class="im">from</span> <span class="st">"@mroumaya/random-ufo"</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>ufoReport <span class="op">=</span> d3<span class="op">.</span><span class="fu">csv</span>(<span class="st">'https://raw.githubusercontent.com/mattroumaya/mufonbot/master/data_raw/links.csv'</span>)</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="fu">selectRandom</span>(ufoReport)<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1" data-startfrom="21" data-source-offset="-1"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 20;"><span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> { selectRandom<span class="op">,</span> addHeader } <span class="im">from</span> <span class="st">"@mroumaya/random-ufo"</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>ufoReport <span class="op">=</span> d3<span class="op">.</span><span class="fu">csv</span>(<span class="st">'https://raw.githubusercontent.com/mattroumaya/mufonbot/master/data_raw/links.csv'</span>)</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="fu">selectRandom</span>(ufoReport)<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-1-1" data-nodetype="declaration">
@@ -231,7 +241,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<div class="sourceCode cell-code" id="cb2" data-startfrom="20" data-source-offset="-194"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 19;"><span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="fu">addHeader</span>(<span class="fu">selectRandom</span>(ufoReport))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2" data-startfrom="26" data-source-offset="-194"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 25;"><span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="fu">addHeader</span>(<span class="fu">selectRandom</span>(ufoReport))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-1-4" data-nodetype="expression">
@@ -241,19 +251,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3" data-startfrom="23" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 22;"><span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>htl<span class="op">.</span><span class="fu">html</span><span class="vs">`&lt;h3 class='header'&gt;&lt;/h3&gt;</span></span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;div class="date"&gt;&lt;/div&gt;</span></span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;div class="shape"&gt;&lt;/div&gt;</span></span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;div class="duration"&gt;&lt;/div&gt;</span></span>
-<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;br&gt;</span></span>
-<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;a class="report-link"&gt;Link to Report&lt;/a&gt;</span></span>
-<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;br&gt;</span></span>
-<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;a class="raw-link"&gt;Link to Image&lt;/a&gt;</span></span>
-<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;br&gt;</span></span>
-<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;br&gt;</span></span>
-<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;div class="summary"&gt;&lt;/div&gt;</span></span>
-<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;img id="ufo-img" style="height: 500px"&gt;</span></span>
-<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;br&gt;`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3" data-startfrom="29" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 28;"><span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>htl<span class="op">.</span><span class="fu">html</span><span class="vs">`&lt;h3 class='header'&gt;&lt;/h3&gt;</span></span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;div class="date"&gt;&lt;/div&gt;</span></span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;div class="shape"&gt;&lt;/div&gt;</span></span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;div class="duration"&gt;&lt;/div&gt;</span></span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;br&gt;</span></span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;a class="report-link"&gt;Link to Report&lt;/a&gt;</span></span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;br&gt;</span></span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;a class="raw-link"&gt;Link to Image&lt;/a&gt;</span></span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;br&gt;</span></span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;br&gt;</span></span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;div class="summary"&gt;&lt;/div&gt;</span></span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;img id="ufo-img" style="height: 500px"&gt;</span></span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;br&gt;`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-2" data-nodetype="expression">
 
@@ -262,6 +272,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script type="ojs-module-contents">

@@ -1,16 +1,8 @@
 [
   {
-    "listing": "/projects.html",
-    "items": [
-      "/projects/nuforcbot.html",
-      "/projects/phillymetal.html",
-      "/projects/phillymetaldata.html",
-      "/projects/surveymonkey.html"
-    ]
-  },
-  {
     "listing": "/index.html",
     "items": [
+      "/posts/nuforc/index.html",
       "/posts/phillymetal/index.html",
       "/posts/sorta/index.html",
       "/posts/parameterized-reports/index.html",
@@ -18,6 +10,15 @@
       "/posts/doubleheadR/index.html",
       "/posts/dealing-with-doubleheadr/index.html",
       "/posts/rummy/index.html"
+    ]
+  },
+  {
+    "listing": "/projects.html",
+    "items": [
+      "/projects/nuforcbot.html",
+      "/projects/phillymetal.html",
+      "/projects/phillymetaldata.html",
+      "/projects/surveymonkey.html"
     ]
   }
 ]

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.1.251">
+<meta name="generator" content="quarto-1.3.326">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -19,9 +19,10 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -48,43 +49,13 @@ pre.numberSource code > span > a:first-child::before
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
     padding: 0 4px; width: 4em;
-    color: #aaaaaa;
   }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
 div.sourceCode
   {   }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { color: #008000; } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { color: #008000; font-weight: bold; } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -127,7 +98,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <link rel="stylesheet" href="../../styles.css">
 <meta name="twitter:title" content="matt roumaya">
-<meta name="twitter:description" content="SurveyMonkey 🐒 is a popular online survey development software that outputs a very frustrating kind of response file.">
+<meta name="twitter:description" content="">
 <meta name="twitter:image" content="image.png">
 <meta name="twitter:card" content="summary_large_image">
 </head>
@@ -143,37 +114,42 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <span class="navbar-title">matt roumaya</span>
     </a>
   </div>
+            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html">about</a>
+    <a class="nav-link" href="../../about.html" rel="" target="">
+ <span class="menu-text">about</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html">blog</a>
+    <a class="nav-link" href="../../index.html" rel="" target="">
+ <span class="menu-text">blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../projects.html">projects</a>
+    <a class="nav-link" href="../../projects.html" rel="" target="">
+ <span class="menu-text">projects</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/mattroumaya"><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/mattroumaya" rel="" target=""><i class="bi bi-github" role="img">
 </i> 
- </a>
+ <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com/bigantsaresmall"><i class="bi bi-twitter" role="img">
+    <a class="nav-link" href="https://twitter.com/bigantsaresmall" rel="" target=""><i class="bi bi-twitter" role="img">
 </i> 
- </a>
+ <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.linkedin.com/in/mattroumaya"><i class="bi bi-linkedin" role="img">
+    <a class="nav-link" href="https://www.linkedin.com/in/mattroumaya" rel="" target=""><i class="bi bi-linkedin" role="img">
 </i> 
- </a>
+ <span class="menu-text"></span></a>
   </li>  
 </ul>
-              <div id="quarto-search" class="" title="Search"></div>
+            <div class="quarto-navbar-tools">
+</div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
@@ -207,6 +183,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
         <p class="date">May 2, 2020</p>
       </div>
     </div>
+    
       
     </div>
     
@@ -279,7 +256,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-:where(#smgaretruk) .gt_table {
+#smgaretruk .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -304,7 +281,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-left-color: #D3D3D3;
 }
 
-:where(#smgaretruk) .gt_heading {
+#smgaretruk .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -316,7 +293,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-right-color: #D3D3D3;
 }
 
-:where(#smgaretruk) .gt_title {
+#smgaretruk .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -328,7 +305,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-bottom-width: 0;
 }
 
-:where(#smgaretruk) .gt_subtitle {
+#smgaretruk .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -340,13 +317,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-top-width: 0;
 }
 
-:where(#smgaretruk) .gt_bottom_border {
+#smgaretruk .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-:where(#smgaretruk) .gt_col_headings {
+#smgaretruk .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -361,7 +338,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-right-color: #D3D3D3;
 }
 
-:where(#smgaretruk) .gt_col_heading {
+#smgaretruk .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -381,7 +358,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   overflow-x: hidden;
 }
 
-:where(#smgaretruk) .gt_column_spanner_outer {
+#smgaretruk .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -393,15 +370,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 4px;
 }
 
-:where(#smgaretruk) .gt_column_spanner_outer:first-child {
+#smgaretruk .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-:where(#smgaretruk) .gt_column_spanner_outer:last-child {
+#smgaretruk .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-:where(#smgaretruk) .gt_column_spanner {
+#smgaretruk .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -413,7 +390,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   width: 100%;
 }
 
-:where(#smgaretruk) .gt_group_heading {
+#smgaretruk .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -438,7 +415,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   vertical-align: middle;
 }
 
-:where(#smgaretruk) .gt_empty_group_heading {
+#smgaretruk .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -453,15 +430,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   vertical-align: middle;
 }
 
-:where(#smgaretruk) .gt_from_md > :first-child {
+#smgaretruk .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-:where(#smgaretruk) .gt_from_md > :last-child {
+#smgaretruk .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-:where(#smgaretruk) .gt_row {
+#smgaretruk .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -480,7 +457,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   overflow-x: hidden;
 }
 
-:where(#smgaretruk) .gt_stub {
+#smgaretruk .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -493,7 +470,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 5px;
 }
 
-:where(#smgaretruk) .gt_stub_row_group {
+#smgaretruk .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -507,11 +484,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   vertical-align: top;
 }
 
-:where(#smgaretruk) .gt_row_group_first td {
+#smgaretruk .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-:where(#smgaretruk) .gt_summary_row {
+#smgaretruk .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -521,16 +498,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 5px;
 }
 
-:where(#smgaretruk) .gt_first_summary_row {
+#smgaretruk .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-:where(#smgaretruk) .gt_first_summary_row.thick {
+#smgaretruk .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-:where(#smgaretruk) .gt_last_summary_row {
+#smgaretruk .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -540,7 +517,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-bottom-color: #D3D3D3;
 }
 
-:where(#smgaretruk) .gt_grand_summary_row {
+#smgaretruk .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -550,7 +527,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 5px;
 }
 
-:where(#smgaretruk) .gt_first_grand_summary_row {
+#smgaretruk .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -560,11 +537,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-top-color: #D3D3D3;
 }
 
-:where(#smgaretruk) .gt_striped {
+#smgaretruk .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-:where(#smgaretruk) .gt_table_body {
+#smgaretruk .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -573,7 +550,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-bottom-color: #D3D3D3;
 }
 
-:where(#smgaretruk) .gt_footnotes {
+#smgaretruk .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -587,7 +564,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-right-color: #D3D3D3;
 }
 
-:where(#smgaretruk) .gt_footnote {
+#smgaretruk .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-left: 4px;
@@ -596,7 +573,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 5px;
 }
 
-:where(#smgaretruk) .gt_sourcenotes {
+#smgaretruk .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -610,7 +587,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-right-color: #D3D3D3;
 }
 
-:where(#smgaretruk) .gt_sourcenote {
+#smgaretruk .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -618,87 +595,88 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 5px;
 }
 
-:where(#smgaretruk) .gt_left {
+#smgaretruk .gt_left {
   text-align: left;
 }
 
-:where(#smgaretruk) .gt_center {
+#smgaretruk .gt_center {
   text-align: center;
 }
 
-:where(#smgaretruk) .gt_right {
+#smgaretruk .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-:where(#smgaretruk) .gt_font_normal {
+#smgaretruk .gt_font_normal {
   font-weight: normal;
 }
 
-:where(#smgaretruk) .gt_font_bold {
+#smgaretruk .gt_font_bold {
   font-weight: bold;
 }
 
-:where(#smgaretruk) .gt_font_italic {
+#smgaretruk .gt_font_italic {
   font-style: italic;
 }
 
-:where(#smgaretruk) .gt_super {
+#smgaretruk .gt_super {
   font-size: 65%;
 }
 
-:where(#smgaretruk) .gt_footnote_marks {
+#smgaretruk .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 75%;
   vertical-align: 0.4em;
 }
 
-:where(#smgaretruk) .gt_asterisk {
+#smgaretruk .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-:where(#smgaretruk) .gt_indent_1 {
+#smgaretruk .gt_indent_1 {
   text-indent: 5px;
 }
 
-:where(#smgaretruk) .gt_indent_2 {
+#smgaretruk .gt_indent_2 {
   text-indent: 10px;
 }
 
-:where(#smgaretruk) .gt_indent_3 {
+#smgaretruk .gt_indent_3 {
   text-indent: 15px;
 }
 
-:where(#smgaretruk) .gt_indent_4 {
+#smgaretruk .gt_indent_4 {
   text-indent: 20px;
 }
 
-:where(#smgaretruk) .gt_indent_5 {
+#smgaretruk .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
-<table class="gt_table">
-  
-  <thead class="gt_col_headings">
-    <tr>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">Respondent ID</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col">Please provide your contact information:</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col">...3</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col">...4</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col">...5</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col">...6</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col">...7</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col">...8</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col">...9</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col">...10</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col">...11</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col">I wish it would have snowed more this winter.</th>
-    </tr>
-  </thead>
-  <tbody class="gt_table_body">
-    <tr><td class="gt_row gt_right">NA</td>
+
+<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true">
+<thead class="gt_col_headings">
+<tr class="header">
+<th class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Respondent ID</th>
+<th class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Please provide your contact information:</th>
+<th class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">...3</th>
+<th class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">...4</th>
+<th class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">...5</th>
+<th class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">...6</th>
+<th class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">...7</th>
+<th class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">...8</th>
+<th class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">...9</th>
+<th class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">...10</th>
+<th class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">...11</th>
+<th class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">I wish it would have snowed more this winter.</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_right">NA</td>
 <td class="gt_row gt_left">Name</td>
 <td class="gt_row gt_left">Company</td>
 <td class="gt_row gt_left">Address</td>
@@ -709,8 +687,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <td class="gt_row gt_left">Country</td>
 <td class="gt_row gt_left">Email Address</td>
 <td class="gt_row gt_left">Phone Number</td>
-<td class="gt_row gt_left">Response</td></tr>
-    <tr><td class="gt_row gt_right">11385284375</td>
+<td class="gt_row gt_left">Response</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right">11385284375</td>
 <td class="gt_row gt_left">Benjamin Franklin</td>
 <td class="gt_row gt_left">Poor Richard's</td>
 <td class="gt_row gt_left">NA</td>
@@ -721,8 +701,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <td class="gt_row gt_left">NA</td>
 <td class="gt_row gt_left">benjamins@gmail.com</td>
 <td class="gt_row gt_left">215-555-4444</td>
-<td class="gt_row gt_left">Strongly disagree</td></tr>
-    <tr><td class="gt_row gt_right">11385273621</td>
+<td class="gt_row gt_left">Strongly disagree</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right">11385273621</td>
 <td class="gt_row gt_left">Mae Jemison</td>
 <td class="gt_row gt_left">NASA</td>
 <td class="gt_row gt_left">NA</td>
@@ -733,8 +715,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <td class="gt_row gt_left">NA</td>
 <td class="gt_row gt_left">mjemison@nasa.gov</td>
 <td class="gt_row gt_left">221-134-4646</td>
-<td class="gt_row gt_left">Strongly agree</td></tr>
-    <tr><td class="gt_row gt_right">11385258069</td>
+<td class="gt_row gt_left">Strongly agree</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right">11385258069</td>
 <td class="gt_row gt_left">Carl Sagan</td>
 <td class="gt_row gt_left">Smithsonian</td>
 <td class="gt_row gt_left">NA</td>
@@ -745,11 +729,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <td class="gt_row gt_left">NA</td>
 <td class="gt_row gt_left">stargazer@gmail.com</td>
 <td class="gt_row gt_left">999-999-4422</td>
-<td class="gt_row gt_left">Neither agree nor disagree</td></tr>
-  </tbody>
-  
-  
+<td class="gt_row gt_left">Neither agree nor disagree</td>
+</tr>
+</tbody>
 </table>
+
 </div>
 </div>
 </div>
@@ -820,7 +804,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-:where(#vcmnnueqeo) .gt_table {
+#vcmnnueqeo .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -845,7 +829,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-left-color: #D3D3D3;
 }
 
-:where(#vcmnnueqeo) .gt_heading {
+#vcmnnueqeo .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -857,7 +841,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-right-color: #D3D3D3;
 }
 
-:where(#vcmnnueqeo) .gt_title {
+#vcmnnueqeo .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -869,7 +853,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-bottom-width: 0;
 }
 
-:where(#vcmnnueqeo) .gt_subtitle {
+#vcmnnueqeo .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -881,13 +865,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-top-width: 0;
 }
 
-:where(#vcmnnueqeo) .gt_bottom_border {
+#vcmnnueqeo .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-:where(#vcmnnueqeo) .gt_col_headings {
+#vcmnnueqeo .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -902,7 +886,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-right-color: #D3D3D3;
 }
 
-:where(#vcmnnueqeo) .gt_col_heading {
+#vcmnnueqeo .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -922,7 +906,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   overflow-x: hidden;
 }
 
-:where(#vcmnnueqeo) .gt_column_spanner_outer {
+#vcmnnueqeo .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -934,15 +918,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 4px;
 }
 
-:where(#vcmnnueqeo) .gt_column_spanner_outer:first-child {
+#vcmnnueqeo .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-:where(#vcmnnueqeo) .gt_column_spanner_outer:last-child {
+#vcmnnueqeo .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-:where(#vcmnnueqeo) .gt_column_spanner {
+#vcmnnueqeo .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -954,7 +938,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   width: 100%;
 }
 
-:where(#vcmnnueqeo) .gt_group_heading {
+#vcmnnueqeo .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -979,7 +963,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   vertical-align: middle;
 }
 
-:where(#vcmnnueqeo) .gt_empty_group_heading {
+#vcmnnueqeo .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -994,15 +978,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   vertical-align: middle;
 }
 
-:where(#vcmnnueqeo) .gt_from_md > :first-child {
+#vcmnnueqeo .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-:where(#vcmnnueqeo) .gt_from_md > :last-child {
+#vcmnnueqeo .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-:where(#vcmnnueqeo) .gt_row {
+#vcmnnueqeo .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1021,7 +1005,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   overflow-x: hidden;
 }
 
-:where(#vcmnnueqeo) .gt_stub {
+#vcmnnueqeo .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1034,7 +1018,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 5px;
 }
 
-:where(#vcmnnueqeo) .gt_stub_row_group {
+#vcmnnueqeo .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1048,11 +1032,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   vertical-align: top;
 }
 
-:where(#vcmnnueqeo) .gt_row_group_first td {
+#vcmnnueqeo .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-:where(#vcmnnueqeo) .gt_summary_row {
+#vcmnnueqeo .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1062,16 +1046,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 5px;
 }
 
-:where(#vcmnnueqeo) .gt_first_summary_row {
+#vcmnnueqeo .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-:where(#vcmnnueqeo) .gt_first_summary_row.thick {
+#vcmnnueqeo .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-:where(#vcmnnueqeo) .gt_last_summary_row {
+#vcmnnueqeo .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1081,7 +1065,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-bottom-color: #D3D3D3;
 }
 
-:where(#vcmnnueqeo) .gt_grand_summary_row {
+#vcmnnueqeo .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1091,7 +1075,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 5px;
 }
 
-:where(#vcmnnueqeo) .gt_first_grand_summary_row {
+#vcmnnueqeo .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1101,11 +1085,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-top-color: #D3D3D3;
 }
 
-:where(#vcmnnueqeo) .gt_striped {
+#vcmnnueqeo .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-:where(#vcmnnueqeo) .gt_table_body {
+#vcmnnueqeo .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1114,7 +1098,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-bottom-color: #D3D3D3;
 }
 
-:where(#vcmnnueqeo) .gt_footnotes {
+#vcmnnueqeo .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1128,7 +1112,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-right-color: #D3D3D3;
 }
 
-:where(#vcmnnueqeo) .gt_footnote {
+#vcmnnueqeo .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-left: 4px;
@@ -1137,7 +1121,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 5px;
 }
 
-:where(#vcmnnueqeo) .gt_sourcenotes {
+#vcmnnueqeo .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1151,7 +1135,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-right-color: #D3D3D3;
 }
 
-:where(#vcmnnueqeo) .gt_sourcenote {
+#vcmnnueqeo .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1159,108 +1143,129 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 5px;
 }
 
-:where(#vcmnnueqeo) .gt_left {
+#vcmnnueqeo .gt_left {
   text-align: left;
 }
 
-:where(#vcmnnueqeo) .gt_center {
+#vcmnnueqeo .gt_center {
   text-align: center;
 }
 
-:where(#vcmnnueqeo) .gt_right {
+#vcmnnueqeo .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-:where(#vcmnnueqeo) .gt_font_normal {
+#vcmnnueqeo .gt_font_normal {
   font-weight: normal;
 }
 
-:where(#vcmnnueqeo) .gt_font_bold {
+#vcmnnueqeo .gt_font_bold {
   font-weight: bold;
 }
 
-:where(#vcmnnueqeo) .gt_font_italic {
+#vcmnnueqeo .gt_font_italic {
   font-style: italic;
 }
 
-:where(#vcmnnueqeo) .gt_super {
+#vcmnnueqeo .gt_super {
   font-size: 65%;
 }
 
-:where(#vcmnnueqeo) .gt_footnote_marks {
+#vcmnnueqeo .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 75%;
   vertical-align: 0.4em;
 }
 
-:where(#vcmnnueqeo) .gt_asterisk {
+#vcmnnueqeo .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-:where(#vcmnnueqeo) .gt_indent_1 {
+#vcmnnueqeo .gt_indent_1 {
   text-indent: 5px;
 }
 
-:where(#vcmnnueqeo) .gt_indent_2 {
+#vcmnnueqeo .gt_indent_2 {
   text-indent: 10px;
 }
 
-:where(#vcmnnueqeo) .gt_indent_3 {
+#vcmnnueqeo .gt_indent_3 {
   text-indent: 15px;
 }
 
-:where(#vcmnnueqeo) .gt_indent_4 {
+#vcmnnueqeo .gt_indent_4 {
   text-indent: 20px;
 }
 
-:where(#vcmnnueqeo) .gt_indent_5 {
+#vcmnnueqeo .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
-<table class="gt_table">
-  
-  <thead class="gt_col_headings">
-    <tr>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col">name</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col">value</th>
-    </tr>
-  </thead>
-  <tbody class="gt_table_body">
-    <tr class="gt_group_heading_row">
-      <td colspan="2" class="gt_group_heading">1</td>
-    </tr>
-    <tr class="gt_row_group_first"><td class="gt_row gt_left">Please provide your contact information:</td>
-<td class="gt_row gt_left">Name</td></tr>
-    <tr><td class="gt_row gt_left">...3</td>
-<td class="gt_row gt_left">Company</td></tr>
-    <tr><td class="gt_row gt_left">...4</td>
-<td class="gt_row gt_left">Address</td></tr>
-    <tr><td class="gt_row gt_left">...5</td>
-<td class="gt_row gt_left">Address 2</td></tr>
-    <tr><td class="gt_row gt_left">...6</td>
-<td class="gt_row gt_left">City/Town</td></tr>
-    <tr><td class="gt_row gt_left">...7</td>
-<td class="gt_row gt_left">State/Province</td></tr>
-    <tr><td class="gt_row gt_left">...8</td>
-<td class="gt_row gt_left">ZIP/Postal Code</td></tr>
-    <tr><td class="gt_row gt_left">...9</td>
-<td class="gt_row gt_left">Country</td></tr>
-    <tr><td class="gt_row gt_left">...10</td>
-<td class="gt_row gt_left">Email Address</td></tr>
-    <tr><td class="gt_row gt_left">...11</td>
-<td class="gt_row gt_left">Phone Number</td></tr>
-    <tr class="gt_group_heading_row">
-      <td colspan="2" class="gt_group_heading">2</td>
-    </tr>
-    <tr class="gt_row_group_first"><td class="gt_row gt_left">I wish it would have snowed more this winter.</td>
-<td class="gt_row gt_left">Response</td></tr>
-  </tbody>
-  
-  
+
+<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true">
+<thead class="gt_col_headings">
+<tr class="header">
+<th class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">name</th>
+<th class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">value</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd gt_group_heading_row">
+<td colspan="2" class="gt_group_heading">1</td>
+</tr>
+<tr class="even gt_row_group_first">
+<td class="gt_row gt_left">Please provide your contact information:</td>
+<td class="gt_row gt_left">Name</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left">...3</td>
+<td class="gt_row gt_left">Company</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left">...4</td>
+<td class="gt_row gt_left">Address</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left">...5</td>
+<td class="gt_row gt_left">Address 2</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left">...6</td>
+<td class="gt_row gt_left">City/Town</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left">...7</td>
+<td class="gt_row gt_left">State/Province</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left">...8</td>
+<td class="gt_row gt_left">ZIP/Postal Code</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left">...9</td>
+<td class="gt_row gt_left">Country</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left">...10</td>
+<td class="gt_row gt_left">Email Address</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left">...11</td>
+<td class="gt_row gt_left">Phone Number</td>
+</tr>
+<tr class="even gt_group_heading_row">
+<td colspan="2" class="gt_group_heading">2</td>
+</tr>
+<tr class="odd gt_row_group_first">
+<td class="gt_row gt_left">I wish it would have snowed more this winter.</td>
+<td class="gt_row gt_left">Response</td>
+</tr>
+</tbody>
 </table>
+
 </div>
 </div>
 </div>
@@ -1275,7 +1280,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-:where(#ghtjqxcdwi) .gt_table {
+#ghtjqxcdwi .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -1300,7 +1305,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-left-color: #D3D3D3;
 }
 
-:where(#ghtjqxcdwi) .gt_heading {
+#ghtjqxcdwi .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1312,7 +1317,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-right-color: #D3D3D3;
 }
 
-:where(#ghtjqxcdwi) .gt_title {
+#ghtjqxcdwi .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1324,7 +1329,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-bottom-width: 0;
 }
 
-:where(#ghtjqxcdwi) .gt_subtitle {
+#ghtjqxcdwi .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1336,13 +1341,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-top-width: 0;
 }
 
-:where(#ghtjqxcdwi) .gt_bottom_border {
+#ghtjqxcdwi .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-:where(#ghtjqxcdwi) .gt_col_headings {
+#ghtjqxcdwi .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1357,7 +1362,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-right-color: #D3D3D3;
 }
 
-:where(#ghtjqxcdwi) .gt_col_heading {
+#ghtjqxcdwi .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1377,7 +1382,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   overflow-x: hidden;
 }
 
-:where(#ghtjqxcdwi) .gt_column_spanner_outer {
+#ghtjqxcdwi .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1389,15 +1394,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 4px;
 }
 
-:where(#ghtjqxcdwi) .gt_column_spanner_outer:first-child {
+#ghtjqxcdwi .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-:where(#ghtjqxcdwi) .gt_column_spanner_outer:last-child {
+#ghtjqxcdwi .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-:where(#ghtjqxcdwi) .gt_column_spanner {
+#ghtjqxcdwi .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1409,7 +1414,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   width: 100%;
 }
 
-:where(#ghtjqxcdwi) .gt_group_heading {
+#ghtjqxcdwi .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1434,7 +1439,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   vertical-align: middle;
 }
 
-:where(#ghtjqxcdwi) .gt_empty_group_heading {
+#ghtjqxcdwi .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1449,15 +1454,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   vertical-align: middle;
 }
 
-:where(#ghtjqxcdwi) .gt_from_md > :first-child {
+#ghtjqxcdwi .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-:where(#ghtjqxcdwi) .gt_from_md > :last-child {
+#ghtjqxcdwi .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-:where(#ghtjqxcdwi) .gt_row {
+#ghtjqxcdwi .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1476,7 +1481,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   overflow-x: hidden;
 }
 
-:where(#ghtjqxcdwi) .gt_stub {
+#ghtjqxcdwi .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1489,7 +1494,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 5px;
 }
 
-:where(#ghtjqxcdwi) .gt_stub_row_group {
+#ghtjqxcdwi .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1503,11 +1508,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   vertical-align: top;
 }
 
-:where(#ghtjqxcdwi) .gt_row_group_first td {
+#ghtjqxcdwi .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-:where(#ghtjqxcdwi) .gt_summary_row {
+#ghtjqxcdwi .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1517,16 +1522,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 5px;
 }
 
-:where(#ghtjqxcdwi) .gt_first_summary_row {
+#ghtjqxcdwi .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-:where(#ghtjqxcdwi) .gt_first_summary_row.thick {
+#ghtjqxcdwi .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-:where(#ghtjqxcdwi) .gt_last_summary_row {
+#ghtjqxcdwi .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1536,7 +1541,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-bottom-color: #D3D3D3;
 }
 
-:where(#ghtjqxcdwi) .gt_grand_summary_row {
+#ghtjqxcdwi .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1546,7 +1551,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 5px;
 }
 
-:where(#ghtjqxcdwi) .gt_first_grand_summary_row {
+#ghtjqxcdwi .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1556,11 +1561,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-top-color: #D3D3D3;
 }
 
-:where(#ghtjqxcdwi) .gt_striped {
+#ghtjqxcdwi .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-:where(#ghtjqxcdwi) .gt_table_body {
+#ghtjqxcdwi .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1569,7 +1574,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-bottom-color: #D3D3D3;
 }
 
-:where(#ghtjqxcdwi) .gt_footnotes {
+#ghtjqxcdwi .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1583,7 +1588,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-right-color: #D3D3D3;
 }
 
-:where(#ghtjqxcdwi) .gt_footnote {
+#ghtjqxcdwi .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-left: 4px;
@@ -1592,7 +1597,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 5px;
 }
 
-:where(#ghtjqxcdwi) .gt_sourcenotes {
+#ghtjqxcdwi .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1606,7 +1611,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-right-color: #D3D3D3;
 }
 
-:where(#ghtjqxcdwi) .gt_sourcenote {
+#ghtjqxcdwi .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1614,95 +1619,106 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 5px;
 }
 
-:where(#ghtjqxcdwi) .gt_left {
+#ghtjqxcdwi .gt_left {
   text-align: left;
 }
 
-:where(#ghtjqxcdwi) .gt_center {
+#ghtjqxcdwi .gt_center {
   text-align: center;
 }
 
-:where(#ghtjqxcdwi) .gt_right {
+#ghtjqxcdwi .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-:where(#ghtjqxcdwi) .gt_font_normal {
+#ghtjqxcdwi .gt_font_normal {
   font-weight: normal;
 }
 
-:where(#ghtjqxcdwi) .gt_font_bold {
+#ghtjqxcdwi .gt_font_bold {
   font-weight: bold;
 }
 
-:where(#ghtjqxcdwi) .gt_font_italic {
+#ghtjqxcdwi .gt_font_italic {
   font-style: italic;
 }
 
-:where(#ghtjqxcdwi) .gt_super {
+#ghtjqxcdwi .gt_super {
   font-size: 65%;
 }
 
-:where(#ghtjqxcdwi) .gt_footnote_marks {
+#ghtjqxcdwi .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 75%;
   vertical-align: 0.4em;
 }
 
-:where(#ghtjqxcdwi) .gt_asterisk {
+#ghtjqxcdwi .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-:where(#ghtjqxcdwi) .gt_indent_1 {
+#ghtjqxcdwi .gt_indent_1 {
   text-indent: 5px;
 }
 
-:where(#ghtjqxcdwi) .gt_indent_2 {
+#ghtjqxcdwi .gt_indent_2 {
   text-indent: 10px;
 }
 
-:where(#ghtjqxcdwi) .gt_indent_3 {
+#ghtjqxcdwi .gt_indent_3 {
   text-indent: 15px;
 }
 
-:where(#ghtjqxcdwi) .gt_indent_4 {
+#ghtjqxcdwi .gt_indent_4 {
   text-indent: 20px;
 }
 
-:where(#ghtjqxcdwi) .gt_indent_5 {
+#ghtjqxcdwi .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
-<table class="gt_table">
-  
-  <thead class="gt_col_headings">
-    <tr>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col">name</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col">value</th>
-    </tr>
-  </thead>
-  <tbody class="gt_table_body">
-    <tr class="gt_group_heading_row">
-      <td colspan="2" class="gt_group_heading">1</td>
-    </tr>
-    <tr class="gt_row_group_first"><td class="gt_row gt_left">Please provide your contact information:</td>
-<td class="gt_row gt_left">Please provide your contact information: (Name)</td></tr>
-    <tr><td class="gt_row gt_left">...3</td>
-<td class="gt_row gt_left">Please provide your contact information: (Company)</td></tr>
-    <tr><td class="gt_row gt_left">...4</td>
-<td class="gt_row gt_left">Please provide your contact information: (Address)</td></tr>
-    <tr><td class="gt_row gt_left">...5</td>
-<td class="gt_row gt_left">Please provide your contact information: (Address 2)</td></tr>
-    <tr><td class="gt_row gt_left">...6</td>
-<td class="gt_row gt_left">Please provide your contact information: (City/Town)</td></tr>
-    <tr><td class="gt_row gt_left">...7</td>
-<td class="gt_row gt_left">Please provide your contact information: (State/Province)</td></tr>
-  </tbody>
-  
-  
+
+<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true">
+<thead class="gt_col_headings">
+<tr class="header">
+<th class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">name</th>
+<th class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">value</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd gt_group_heading_row">
+<td colspan="2" class="gt_group_heading">1</td>
+</tr>
+<tr class="even gt_row_group_first">
+<td class="gt_row gt_left">Please provide your contact information:</td>
+<td class="gt_row gt_left">Please provide your contact information: (Name)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left">...3</td>
+<td class="gt_row gt_left">Please provide your contact information: (Company)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left">...4</td>
+<td class="gt_row gt_left">Please provide your contact information: (Address)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left">...5</td>
+<td class="gt_row gt_left">Please provide your contact information: (Address 2)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left">...6</td>
+<td class="gt_row gt_left">Please provide your contact information: (City/Town)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left">...7</td>
+<td class="gt_row gt_left">Please provide your contact information: (State/Province)</td>
+</tr>
+</tbody>
 </table>
+
 </div>
 </div>
 </div>
@@ -1727,7 +1743,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-:where(#cvnrbupmgh) .gt_table {
+#cvnrbupmgh .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -1752,7 +1768,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-left-color: #D3D3D3;
 }
 
-:where(#cvnrbupmgh) .gt_heading {
+#cvnrbupmgh .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1764,7 +1780,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-right-color: #D3D3D3;
 }
 
-:where(#cvnrbupmgh) .gt_title {
+#cvnrbupmgh .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1776,7 +1792,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-bottom-width: 0;
 }
 
-:where(#cvnrbupmgh) .gt_subtitle {
+#cvnrbupmgh .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1788,13 +1804,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-top-width: 0;
 }
 
-:where(#cvnrbupmgh) .gt_bottom_border {
+#cvnrbupmgh .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-:where(#cvnrbupmgh) .gt_col_headings {
+#cvnrbupmgh .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1809,7 +1825,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-right-color: #D3D3D3;
 }
 
-:where(#cvnrbupmgh) .gt_col_heading {
+#cvnrbupmgh .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1829,7 +1845,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   overflow-x: hidden;
 }
 
-:where(#cvnrbupmgh) .gt_column_spanner_outer {
+#cvnrbupmgh .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1841,15 +1857,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 4px;
 }
 
-:where(#cvnrbupmgh) .gt_column_spanner_outer:first-child {
+#cvnrbupmgh .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-:where(#cvnrbupmgh) .gt_column_spanner_outer:last-child {
+#cvnrbupmgh .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-:where(#cvnrbupmgh) .gt_column_spanner {
+#cvnrbupmgh .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1861,7 +1877,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   width: 100%;
 }
 
-:where(#cvnrbupmgh) .gt_group_heading {
+#cvnrbupmgh .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1886,7 +1902,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   vertical-align: middle;
 }
 
-:where(#cvnrbupmgh) .gt_empty_group_heading {
+#cvnrbupmgh .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1901,15 +1917,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   vertical-align: middle;
 }
 
-:where(#cvnrbupmgh) .gt_from_md > :first-child {
+#cvnrbupmgh .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-:where(#cvnrbupmgh) .gt_from_md > :last-child {
+#cvnrbupmgh .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-:where(#cvnrbupmgh) .gt_row {
+#cvnrbupmgh .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1928,7 +1944,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   overflow-x: hidden;
 }
 
-:where(#cvnrbupmgh) .gt_stub {
+#cvnrbupmgh .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1941,7 +1957,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 5px;
 }
 
-:where(#cvnrbupmgh) .gt_stub_row_group {
+#cvnrbupmgh .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1955,11 +1971,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   vertical-align: top;
 }
 
-:where(#cvnrbupmgh) .gt_row_group_first td {
+#cvnrbupmgh .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-:where(#cvnrbupmgh) .gt_summary_row {
+#cvnrbupmgh .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1969,16 +1985,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 5px;
 }
 
-:where(#cvnrbupmgh) .gt_first_summary_row {
+#cvnrbupmgh .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-:where(#cvnrbupmgh) .gt_first_summary_row.thick {
+#cvnrbupmgh .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-:where(#cvnrbupmgh) .gt_last_summary_row {
+#cvnrbupmgh .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1988,7 +2004,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-bottom-color: #D3D3D3;
 }
 
-:where(#cvnrbupmgh) .gt_grand_summary_row {
+#cvnrbupmgh .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1998,7 +2014,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 5px;
 }
 
-:where(#cvnrbupmgh) .gt_first_grand_summary_row {
+#cvnrbupmgh .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2008,11 +2024,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-top-color: #D3D3D3;
 }
 
-:where(#cvnrbupmgh) .gt_striped {
+#cvnrbupmgh .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-:where(#cvnrbupmgh) .gt_table_body {
+#cvnrbupmgh .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2021,7 +2037,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-bottom-color: #D3D3D3;
 }
 
-:where(#cvnrbupmgh) .gt_footnotes {
+#cvnrbupmgh .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2035,7 +2051,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-right-color: #D3D3D3;
 }
 
-:where(#cvnrbupmgh) .gt_footnote {
+#cvnrbupmgh .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-left: 4px;
@@ -2044,7 +2060,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 5px;
 }
 
-:where(#cvnrbupmgh) .gt_sourcenotes {
+#cvnrbupmgh .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2058,7 +2074,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-right-color: #D3D3D3;
 }
 
-:where(#cvnrbupmgh) .gt_sourcenote {
+#cvnrbupmgh .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2066,104 +2082,127 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 5px;
 }
 
-:where(#cvnrbupmgh) .gt_left {
+#cvnrbupmgh .gt_left {
   text-align: left;
 }
 
-:where(#cvnrbupmgh) .gt_center {
+#cvnrbupmgh .gt_center {
   text-align: center;
 }
 
-:where(#cvnrbupmgh) .gt_right {
+#cvnrbupmgh .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-:where(#cvnrbupmgh) .gt_font_normal {
+#cvnrbupmgh .gt_font_normal {
   font-weight: normal;
 }
 
-:where(#cvnrbupmgh) .gt_font_bold {
+#cvnrbupmgh .gt_font_bold {
   font-weight: bold;
 }
 
-:where(#cvnrbupmgh) .gt_font_italic {
+#cvnrbupmgh .gt_font_italic {
   font-style: italic;
 }
 
-:where(#cvnrbupmgh) .gt_super {
+#cvnrbupmgh .gt_super {
   font-size: 65%;
 }
 
-:where(#cvnrbupmgh) .gt_footnote_marks {
+#cvnrbupmgh .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 75%;
   vertical-align: 0.4em;
 }
 
-:where(#cvnrbupmgh) .gt_asterisk {
+#cvnrbupmgh .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-:where(#cvnrbupmgh) .gt_indent_1 {
+#cvnrbupmgh .gt_indent_1 {
   text-indent: 5px;
 }
 
-:where(#cvnrbupmgh) .gt_indent_2 {
+#cvnrbupmgh .gt_indent_2 {
   text-indent: 10px;
 }
 
-:where(#cvnrbupmgh) .gt_indent_3 {
+#cvnrbupmgh .gt_indent_3 {
   text-indent: 15px;
 }
 
-:where(#cvnrbupmgh) .gt_indent_4 {
+#cvnrbupmgh .gt_indent_4 {
   text-indent: 20px;
 }
 
-:where(#cvnrbupmgh) .gt_indent_5 {
+#cvnrbupmgh .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
-<table class="gt_table">
-  
-  <thead class="gt_col_headings">
-    <tr>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col">Old Names</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col">New Names</th>
-    </tr>
-  </thead>
-  <tbody class="gt_table_body">
-    <tr><td class="gt_row gt_left">Respondent ID</td>
-<td class="gt_row gt_left">respondent_id</td></tr>
-    <tr><td class="gt_row gt_left">Please provide your contact information:</td>
-<td class="gt_row gt_left">please_provide_your_contact_information_name</td></tr>
-    <tr><td class="gt_row gt_left">...3</td>
-<td class="gt_row gt_left">please_provide_your_contact_information_company</td></tr>
-    <tr><td class="gt_row gt_left">...4</td>
-<td class="gt_row gt_left">please_provide_your_contact_information_address</td></tr>
-    <tr><td class="gt_row gt_left">...5</td>
-<td class="gt_row gt_left">please_provide_your_contact_information_address_2</td></tr>
-    <tr><td class="gt_row gt_left">...6</td>
-<td class="gt_row gt_left">please_provide_your_contact_information_city_town</td></tr>
-    <tr><td class="gt_row gt_left">...7</td>
-<td class="gt_row gt_left">please_provide_your_contact_information_state_province</td></tr>
-    <tr><td class="gt_row gt_left">...8</td>
-<td class="gt_row gt_left">please_provide_your_contact_information_zip_postal_code</td></tr>
-    <tr><td class="gt_row gt_left">...9</td>
-<td class="gt_row gt_left">please_provide_your_contact_information_country</td></tr>
-    <tr><td class="gt_row gt_left">...10</td>
-<td class="gt_row gt_left">please_provide_your_contact_information_email_address</td></tr>
-    <tr><td class="gt_row gt_left">...11</td>
-<td class="gt_row gt_left">please_provide_your_contact_information_phone_number</td></tr>
-    <tr><td class="gt_row gt_left">I wish it would have snowed more this winter.</td>
-<td class="gt_row gt_left">i_wish_it_would_have_snowed_more_this_winter_response</td></tr>
-  </tbody>
-  
-  
+
+<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true">
+<thead class="gt_col_headings">
+<tr class="header">
+<th class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Old Names</th>
+<th class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">New Names</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left">Respondent ID</td>
+<td class="gt_row gt_left">respondent_id</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left">Please provide your contact information:</td>
+<td class="gt_row gt_left">please_provide_your_contact_information_name</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left">...3</td>
+<td class="gt_row gt_left">please_provide_your_contact_information_company</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left">...4</td>
+<td class="gt_row gt_left">please_provide_your_contact_information_address</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left">...5</td>
+<td class="gt_row gt_left">please_provide_your_contact_information_address_2</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left">...6</td>
+<td class="gt_row gt_left">please_provide_your_contact_information_city_town</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left">...7</td>
+<td class="gt_row gt_left">please_provide_your_contact_information_state_province</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left">...8</td>
+<td class="gt_row gt_left">please_provide_your_contact_information_zip_postal_code</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left">...9</td>
+<td class="gt_row gt_left">please_provide_your_contact_information_country</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left">...10</td>
+<td class="gt_row gt_left">please_provide_your_contact_information_email_address</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left">...11</td>
+<td class="gt_row gt_left">please_provide_your_contact_information_phone_number</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left">I wish it would have snowed more this winter.</td>
+<td class="gt_row gt_left">i_wish_it_would_have_snowed_more_this_winter_response</td>
+</tr>
+</tbody>
 </table>
+
 </div>
 </div>
 </div>
@@ -2189,7 +2228,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-:where(#rgcolcybwy) .gt_table {
+#rgcolcybwy .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -2214,7 +2253,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-left-color: #D3D3D3;
 }
 
-:where(#rgcolcybwy) .gt_heading {
+#rgcolcybwy .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -2226,7 +2265,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-right-color: #D3D3D3;
 }
 
-:where(#rgcolcybwy) .gt_title {
+#rgcolcybwy .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -2238,7 +2277,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-bottom-width: 0;
 }
 
-:where(#rgcolcybwy) .gt_subtitle {
+#rgcolcybwy .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -2250,13 +2289,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-top-width: 0;
 }
 
-:where(#rgcolcybwy) .gt_bottom_border {
+#rgcolcybwy .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-:where(#rgcolcybwy) .gt_col_headings {
+#rgcolcybwy .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2271,7 +2310,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-right-color: #D3D3D3;
 }
 
-:where(#rgcolcybwy) .gt_col_heading {
+#rgcolcybwy .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2291,7 +2330,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   overflow-x: hidden;
 }
 
-:where(#rgcolcybwy) .gt_column_spanner_outer {
+#rgcolcybwy .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2303,15 +2342,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 4px;
 }
 
-:where(#rgcolcybwy) .gt_column_spanner_outer:first-child {
+#rgcolcybwy .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-:where(#rgcolcybwy) .gt_column_spanner_outer:last-child {
+#rgcolcybwy .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-:where(#rgcolcybwy) .gt_column_spanner {
+#rgcolcybwy .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2323,7 +2362,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   width: 100%;
 }
 
-:where(#rgcolcybwy) .gt_group_heading {
+#rgcolcybwy .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2348,7 +2387,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   vertical-align: middle;
 }
 
-:where(#rgcolcybwy) .gt_empty_group_heading {
+#rgcolcybwy .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2363,15 +2402,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   vertical-align: middle;
 }
 
-:where(#rgcolcybwy) .gt_from_md > :first-child {
+#rgcolcybwy .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-:where(#rgcolcybwy) .gt_from_md > :last-child {
+#rgcolcybwy .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-:where(#rgcolcybwy) .gt_row {
+#rgcolcybwy .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2390,7 +2429,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   overflow-x: hidden;
 }
 
-:where(#rgcolcybwy) .gt_stub {
+#rgcolcybwy .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2403,7 +2442,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 5px;
 }
 
-:where(#rgcolcybwy) .gt_stub_row_group {
+#rgcolcybwy .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2417,11 +2456,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   vertical-align: top;
 }
 
-:where(#rgcolcybwy) .gt_row_group_first td {
+#rgcolcybwy .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-:where(#rgcolcybwy) .gt_summary_row {
+#rgcolcybwy .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2431,16 +2470,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 5px;
 }
 
-:where(#rgcolcybwy) .gt_first_summary_row {
+#rgcolcybwy .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-:where(#rgcolcybwy) .gt_first_summary_row.thick {
+#rgcolcybwy .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-:where(#rgcolcybwy) .gt_last_summary_row {
+#rgcolcybwy .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2450,7 +2489,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-bottom-color: #D3D3D3;
 }
 
-:where(#rgcolcybwy) .gt_grand_summary_row {
+#rgcolcybwy .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2460,7 +2499,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 5px;
 }
 
-:where(#rgcolcybwy) .gt_first_grand_summary_row {
+#rgcolcybwy .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2470,11 +2509,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-top-color: #D3D3D3;
 }
 
-:where(#rgcolcybwy) .gt_striped {
+#rgcolcybwy .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-:where(#rgcolcybwy) .gt_table_body {
+#rgcolcybwy .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2483,7 +2522,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-bottom-color: #D3D3D3;
 }
 
-:where(#rgcolcybwy) .gt_footnotes {
+#rgcolcybwy .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2497,7 +2536,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-right-color: #D3D3D3;
 }
 
-:where(#rgcolcybwy) .gt_footnote {
+#rgcolcybwy .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-left: 4px;
@@ -2506,7 +2545,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 5px;
 }
 
-:where(#rgcolcybwy) .gt_sourcenotes {
+#rgcolcybwy .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2520,7 +2559,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-right-color: #D3D3D3;
 }
 
-:where(#rgcolcybwy) .gt_sourcenote {
+#rgcolcybwy .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2528,85 +2567,86 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 5px;
 }
 
-:where(#rgcolcybwy) .gt_left {
+#rgcolcybwy .gt_left {
   text-align: left;
 }
 
-:where(#rgcolcybwy) .gt_center {
+#rgcolcybwy .gt_center {
   text-align: center;
 }
 
-:where(#rgcolcybwy) .gt_right {
+#rgcolcybwy .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-:where(#rgcolcybwy) .gt_font_normal {
+#rgcolcybwy .gt_font_normal {
   font-weight: normal;
 }
 
-:where(#rgcolcybwy) .gt_font_bold {
+#rgcolcybwy .gt_font_bold {
   font-weight: bold;
 }
 
-:where(#rgcolcybwy) .gt_font_italic {
+#rgcolcybwy .gt_font_italic {
   font-style: italic;
 }
 
-:where(#rgcolcybwy) .gt_super {
+#rgcolcybwy .gt_super {
   font-size: 65%;
 }
 
-:where(#rgcolcybwy) .gt_footnote_marks {
+#rgcolcybwy .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 75%;
   vertical-align: 0.4em;
 }
 
-:where(#rgcolcybwy) .gt_asterisk {
+#rgcolcybwy .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-:where(#rgcolcybwy) .gt_indent_1 {
+#rgcolcybwy .gt_indent_1 {
   text-indent: 5px;
 }
 
-:where(#rgcolcybwy) .gt_indent_2 {
+#rgcolcybwy .gt_indent_2 {
   text-indent: 10px;
 }
 
-:where(#rgcolcybwy) .gt_indent_3 {
+#rgcolcybwy .gt_indent_3 {
   text-indent: 15px;
 }
 
-:where(#rgcolcybwy) .gt_indent_4 {
+#rgcolcybwy .gt_indent_4 {
   text-indent: 20px;
 }
 
-:where(#rgcolcybwy) .gt_indent_5 {
+#rgcolcybwy .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
-<table class="gt_table">
-  
-  <thead class="gt_col_headings">
-    <tr>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col">contact_information_name</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col">contact_information_company</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col">contact_information_address</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col">contact_information_address_2</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col">contact_information_city_town</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col">contact_information_state_province</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">contact_information_zip_postal_code</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col">contact_information_country</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col">contact_information_email_address</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">contact_information_phone_number</th>
-    </tr>
-  </thead>
-  <tbody class="gt_table_body">
-    <tr><td class="gt_row gt_left">Benjamin Franklin</td>
+
+<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true">
+<thead class="gt_col_headings">
+<tr class="header">
+<th class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">contact_information_name</th>
+<th class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">contact_information_company</th>
+<th class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">contact_information_address</th>
+<th class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">contact_information_address_2</th>
+<th class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">contact_information_city_town</th>
+<th class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">contact_information_state_province</th>
+<th class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">contact_information_zip_postal_code</th>
+<th class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">contact_information_country</th>
+<th class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">contact_information_email_address</th>
+<th class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">contact_information_phone_number</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left">Benjamin Franklin</td>
 <td class="gt_row gt_left">Poor Richard's</td>
 <td class="gt_row gt_left">NA</td>
 <td class="gt_row gt_left">NA</td>
@@ -2615,8 +2655,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <td class="gt_row gt_right">19104</td>
 <td class="gt_row gt_left">NA</td>
 <td class="gt_row gt_left">benjamins@gmail.com</td>
-<td class="gt_row gt_right">215-555-4444</td></tr>
-    <tr><td class="gt_row gt_left">Mae Jemison</td>
+<td class="gt_row gt_right">215-555-4444</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left">Mae Jemison</td>
 <td class="gt_row gt_left">NASA</td>
 <td class="gt_row gt_left">NA</td>
 <td class="gt_row gt_left">NA</td>
@@ -2625,8 +2667,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <td class="gt_row gt_right">20104</td>
 <td class="gt_row gt_left">NA</td>
 <td class="gt_row gt_left">mjemison@nasa.gov</td>
-<td class="gt_row gt_right">221-134-4646</td></tr>
-    <tr><td class="gt_row gt_left">Carl Sagan</td>
+<td class="gt_row gt_right">221-134-4646</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left">Carl Sagan</td>
 <td class="gt_row gt_left">Smithsonian</td>
 <td class="gt_row gt_left">NA</td>
 <td class="gt_row gt_left">NA</td>
@@ -2635,8 +2679,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <td class="gt_row gt_right">33321</td>
 <td class="gt_row gt_left">NA</td>
 <td class="gt_row gt_left">stargazer@gmail.com</td>
-<td class="gt_row gt_right">999-999-4422</td></tr>
-    <tr><td class="gt_row gt_left">W. E. B. Du Bois</td>
+<td class="gt_row gt_right">999-999-4422</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left">W. E. B. Du Bois</td>
 <td class="gt_row gt_left">NAACP</td>
 <td class="gt_row gt_left">NA</td>
 <td class="gt_row gt_left">NA</td>
@@ -2645,8 +2691,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <td class="gt_row gt_right">1230</td>
 <td class="gt_row gt_left">NA</td>
 <td class="gt_row gt_left">dubois@web.com</td>
-<td class="gt_row gt_right">999-000-1234</td></tr>
-    <tr><td class="gt_row gt_left">Florence Nightingale</td>
+<td class="gt_row gt_right">999-000-1234</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left">Florence Nightingale</td>
 <td class="gt_row gt_left">Public Health Co</td>
 <td class="gt_row gt_left">NA</td>
 <td class="gt_row gt_left">NA</td>
@@ -2655,8 +2703,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <td class="gt_row gt_right">33225</td>
 <td class="gt_row gt_left">NA</td>
 <td class="gt_row gt_left">firstnurse@aol.com</td>
-<td class="gt_row gt_right">123-456-7899</td></tr>
-    <tr><td class="gt_row gt_left">Galileo Galilei</td>
+<td class="gt_row gt_right">123-456-7899</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left">Galileo Galilei</td>
 <td class="gt_row gt_left">NASA</td>
 <td class="gt_row gt_left">NA</td>
 <td class="gt_row gt_left">NA</td>
@@ -2665,11 +2715,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <td class="gt_row gt_right">12345</td>
 <td class="gt_row gt_left">NA</td>
 <td class="gt_row gt_left">galileo123@yahoo.com</td>
-<td class="gt_row gt_right">111-888-9944</td></tr>
-  </tbody>
-  
-  
+<td class="gt_row gt_right">111-888-9944</td>
+</tr>
+</tbody>
 </table>
+
 </div>
 </div>
 </div>
@@ -2719,9 +2769,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -2733,7 +2797,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
     button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
     setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
       button.setAttribute("title", currentTitle);
       button.classList.remove('code-copy-button-checked');
     }, 1000);
@@ -2769,24 +2850,128 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
   var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
   for (var i=0; i<bibliorefs.length; i++) {
     const ref = bibliorefs[i];
-    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-    tippyHover(ref, function() {
-      var popup = window.document.createElement('div');
-      cites.forEach(function(cite) {
-        var citeDiv = window.document.createElement('div');
-        citeDiv.classList.add('hanging-indent');
-        citeDiv.classList.add('csl-entry');
-        var biblioDiv = window.document.getElementById('ref-' + cite);
-        if (biblioDiv) {
-          citeDiv.innerHTML = biblioDiv.innerHTML;
-        }
-        popup.appendChild(citeDiv);
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
       });
-      return popup.innerHTML;
-    });
+    }
   }
 });
 </script>

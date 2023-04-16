@@ -1,0 +1,37 @@
+---
+title: "Observable Flying Objects"
+author: "Matt Roumaya"
+date: "2023-04-15"
+categories: [R, NUFORC, UFO]
+image: "main.png"
+---
+
+Recently, the Very Smart Guy who owns Twitter pulled the plug on API access for a wide range of developers, including [NUFORC Bot](https://twitter.com/nuforcbot?lang=en), which was built using R and GitHub Actions (repo is [here](https://github.com/mattroumaya/mufonbot)). (For some reason, NUFORC Bot is now back up and running, but it seems like it will be short-lived.)
+
+I've been a subscriber to [**hrbrmstr's Daily Drop**](https://dailyfinds.hrbrmstr.dev/)for a while, and have been seeing some super interesting Observable notebooks but never took the leap to explore them more. The impending demise of NUFORC bot was as good an excuse as any to hack together an Observable notebook that can do everything that NUFORC Bot did + MORE 👽.
+
+```{ojs}
+
+import { selectRandom, addHeader } from "@mroumaya/random-ufo"
+
+ufoReport = d3.csv('https://raw.githubusercontent.com/mattroumaya/mufonbot/master/data_raw/links.csv')
+
+selectRandom(ufoReport);
+addHeader(selectRandom(ufoReport))
+```
+
+```{ojs}
+htl.html`<h3 class='header'></h3>
+<div class="date"></div>
+<div class="shape"></div>
+<div class="duration"></div>
+<br>
+<a class="report-link">Link to Report</a>
+<br>
+<a class="raw-link">Link to Image</a>
+<br>
+<br>
+<div class="summary"></div>
+<img id="ufo-img" style="height: 500px">
+<br>`
+```

@@ -16,6 +16,8 @@
   --beige: #010101;
 
   --gray: #485b63;
+  
+  --hover-yellow: #FFDB58;
 }
    
 * {
@@ -24,7 +26,7 @@
 }
 
 .navbar {
-  background: #6D8EA0;
+  background: #d3d3d3;
 }
 
 .navbar-title {
@@ -33,20 +35,38 @@
     color: #010101;
 }
 
-.quarto-title-banner {
-  background: #182825;
-}
+
 
 .quarto-listing-category-title {
-  color: #182825;
+  color: var(--hover-yellow);
 }
 
 .listing-category:hover {
-  background-color: #D4A0A7;
+  background-color: var(--hover-yellow);
   transition-delay: 0.1s;
 }
 
 .category:hover {
-  color: #D4A0A7;
+  color: var(--hover-yellow);
+}
+
+.menu-text {
+  color: #010101;
+}
+
+.menu-text:active {
+  font-weight: bold;
+}
+
+.menu-text:hover {
+  color: var(--hover-yellow);
+}
+
+.nav-link {
+  color: #010101;
+}
+
+.nav-link:active {
+  color: #010101;
 }
 

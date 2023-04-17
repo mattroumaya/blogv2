@@ -1,52 +1,100 @@
-/* css styles */
-
-/* pink: #D4A0A7 
-   gray: #6D8EA0
-   greenish black: #182825 */
-   
-@import url("https://fonts.googleapis.com/css?family=Rubik+Beastly");
-
-@import url("https://fonts.googleapis.com/css?family=Red+Hat+Mono");
+@import url("https://fonts.googleapis.com/css?family=Rubik+Beastly|Red+Hat+Mono");
 
 :root {
   --header-font: "Rubik Beastly";
-
   --main-font: "Red Hat Mono";
-
   --beige: #010101;
-
   --gray: #485b63;
+  --hover: #0d6efd;
 }
-   
+
 * {
-  font-family: monospace;
-  font-size: 16px;
+  font: 16px/1 monospace;
 }
 
 .navbar {
-  background: #6D8EA0;
+  background: #d3d3d3;
 }
 
 .navbar-title {
-    font-family: var(--header-font);
-    font-size: 24pt;
-    color: #010101;
-}
-
-.quarto-title-banner {
-  background: #182825;
+  font: 24pt/1 var(--header-font);
+  color: var(--beige);
 }
 
 .quarto-listing-category-title {
-  color: #182825;
+  color: var(--hover);
 }
 
 .listing-category:hover {
-  background-color: #D4A0A7;
+  background-color: var(--hover);
   transition-delay: 0.1s;
 }
 
 .category:hover {
-  color: #D4A0A7;
+  color: var(--hover);
 }
 
+.menu-text {
+  color: var(--beige);
+}
+
+.menu-text:active,
+.menu-text:hover {
+  font-weight: bold;
+  color: var(--hover);
+}
+
+.nav-link {
+  color: var(--beige);
+}
+
+.nav-link:active {
+  color: var(--beige);
+}
+
+i.bi {
+  display: inline-block;
+  transition: transform 0.3s ease-out; /* add a transition effect */
+}
+
+i.bi:hover {
+  transform: scale(1.2);
+  z-index: 1; /* bring the element to the front */
+  position: relative; /* set a relative position to enable z-index */
+  color: var(--hover);
+}
+
+.navbar-toggler-icon {
+  display: inline-block;
+  transition: transform 0.3s ease-out;
+}
+
+.navbar-toggler-icon:hover {
+  transform: scale(1.2);
+}
+.aa-DetachedSearchButton {
+  display: inline-block;
+  transition: transform 0.3s ease-out;
+}
+
+.aa-DetachedSearchButton:hover {
+  transform: scale(1.2);
+  color: var(--hover)
+}
+
+h3.no-anchor.listing-title:hover, div.about-links:hover {
+  color: var(--hover)
+  
+}
+
+.quarto-title-banner {
+  background: black;
+}
+
+.quarto-category:hover {
+  transform: scale(1.1);
+}
+
+.g-col-1:hover {
+  transform: scale(1.05);
+}

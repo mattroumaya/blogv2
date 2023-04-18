@@ -5,7 +5,7 @@
   --main-font: "Red Hat Mono";
   --beige: #010101;
   --gray: #485b63;
-  --hover-yellow: #FFDB58;
+  --hover: #0d6efd;
 }
 
 * {
@@ -22,16 +22,16 @@
 }
 
 .quarto-listing-category-title {
-  color: var(--hover-yellow);
+  color: var(--hover);
 }
 
 .listing-category:hover {
-  background-color: var(--hover-yellow);
+  background-color: var(--hover);
   transition-delay: 0.1s;
 }
 
 .category:hover {
-  color: var(--hover-yellow);
+  color: var(--hover);
 }
 
 .menu-text {
@@ -41,7 +41,7 @@
 .menu-text:active,
 .menu-text:hover {
   font-weight: bold;
-  color: var(--hover-yellow);
+  color: var(--hover);
 }
 
 .nav-link {
@@ -61,7 +61,7 @@ i.bi:hover {
   transform: scale(1.2);
   z-index: 1; /* bring the element to the front */
   position: relative; /* set a relative position to enable z-index */
-  color: var(--hover-yellow);
+  color: var(--hover);
 }
 
 .navbar-toggler-icon {
@@ -79,8 +79,22 @@ i.bi:hover {
 
 .aa-DetachedSearchButton:hover {
   transform: scale(1.2);
-  color: var(--hover-yellow)
+  color: var(--hover);
 }
 
+h3.no-anchor.listing-title:hover,
+div.about-links:hover {
+  color: var(--hover);
+}
 
+.quarto-title-banner {
+  background: black;
+}
 
+.quarto-category:hover {
+  transform: scale(1.1);
+}
+
+.g-col-1:hover {
+  transform: scale(1.05);
+}

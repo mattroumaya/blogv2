@@ -79,21 +79,12 @@ i.bi:hover {
 
 .aa-DetachedSearchButton:hover {
   transform: scale(1.2);
-<<<<<<< HEAD
   color: var(--hover);
 }
 
 h3.no-anchor.listing-title:hover,
 div.about-links:hover {
   color: var(--hover);
-=======
-  color: var(--hover)
-}
-
-h3.no-anchor.listing-title:hover, div.about-links:hover {
-  color: var(--hover)
-  
->>>>>>> origin/master
 }
 
 .quarto-title-banner {

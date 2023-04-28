@@ -1,0 +1,48 @@
+---
+title: "Jdenticon for R is on CRAN"
+author: "Matt Roumaya"
+date: "2023-04-29"
+categories: [R, JavaScript, Node.js]
+---
+
+# Introduction 
+
+My colleage Andrew and I have been super interested in combining `Node.js` and `R`, especially after coming across a compelling use case that helps us to simplify Firebase data fetching. Read on to learn more about:
+
+- Why you might want to combine `Node.js` and `R`
+- How you might go about combining `Node.js` and `R`
+- What a Jdenticon/identicon is
+- Submitting a tiny package to CRAN
+
+## Why? 
+
+Rather than designing a multi-step process that would involve running a query in `Node.js`, and then sending the data to `R`, Andrew was able to grab the few functions that we needed directly from the [firebase npm package](https://www.npmjs.com/package/firebase).
+
+This is huge, because it enables any R user on our team to pull data without knowing any JavaScript at all. The only prerequisite is a `Node.js` installation that is already setup on our Posit Workbench server. 
+
+Even though we only need to use JavaScript for a few fairly simple queries, there is still quite a bit of a learning curve for anyone who is unfamiliar. Not only is the language different than R, but there are also DevOps considerations like:
+
+- Installing `Node.js` and using `npm` to install libraries.
+- Managing and securing service account credentials.
+- Ensuring maintainability.
+- Enabling users to have the ability to customize queries when needed.
+
+Wrapping all of this functionality into a few R functions solves all of the issues above. As mentioned, `Node.js` is available for all users on Workbench. Additionally, secure credentials can be permissioned to users that need them, which is safer and less work for everyone. 
+
+Since the functions are written in R, there is already built-in customization by tweaking parameters as needed. Similarly, an R user is much better equipped to maintain an R package, than needing to maintain a `Node.js` custom query that is ingested by an R package. 
+
+## How? 
+
+
+
+# What is Jdenticon?
+
+[Jdenticon](https://jdenticon.com/) is a `Node.js` library that generates identicons, which are: 
+
+> An Identicon is a visual representation of a hash value, usually of an IP address, that serves to identify a user of a computer system as a form of avatar while protecting the users' privacy. [^1]
+
+
+
+
+
+[^1]: [https://en.wikipedia.org/wiki/Identicon](https://en.wikipedia.org/wiki/Identicon)

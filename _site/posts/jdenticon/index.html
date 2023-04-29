@@ -94,12 +94,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-submit-button-title": "Submit"
   }
 }</script>
+<script type="module" src="../../site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+<link href="../../site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="../../styles.css">
 <meta name="twitter:title" content="matt roumaya">
 <meta name="twitter:description" content="">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="jdenticon_100_molly.png">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed">
@@ -235,59 +238,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="how" class="level2">
 <h2 class="anchored" data-anchor-id="how">How?</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>
-Attaching package: 'dplyr'</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>The following objects are masked from 'package:stats':
-
-    filter, lag</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>The following objects are masked from 'package:base':
-
-    intersect, setdiff, setequal, union</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>mtcars</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>                     mpg cyl  disp  hp drat    wt  qsec vs am gear carb
-Mazda RX4           21.0   6 160.0 110 3.90 2.620 16.46  0  1    4    4
-Mazda RX4 Wag       21.0   6 160.0 110 3.90 2.875 17.02  0  1    4    4
-Datsun 710          22.8   4 108.0  93 3.85 2.320 18.61  1  1    4    1
-Hornet 4 Drive      21.4   6 258.0 110 3.08 3.215 19.44  1  0    3    1
-Hornet Sportabout   18.7   8 360.0 175 3.15 3.440 17.02  0  0    3    2
-Valiant             18.1   6 225.0 105 2.76 3.460 20.22  1  0    3    1
-Duster 360          14.3   8 360.0 245 3.21 3.570 15.84  0  0    3    4
-Merc 240D           24.4   4 146.7  62 3.69 3.190 20.00  1  0    4    2
-Merc 230            22.8   4 140.8  95 3.92 3.150 22.90  1  0    4    2
-Merc 280            19.2   6 167.6 123 3.92 3.440 18.30  1  0    4    4
-Merc 280C           17.8   6 167.6 123 3.92 3.440 18.90  1  0    4    4
-Merc 450SE          16.4   8 275.8 180 3.07 4.070 17.40  0  0    3    3
-Merc 450SL          17.3   8 275.8 180 3.07 3.730 17.60  0  0    3    3
-Merc 450SLC         15.2   8 275.8 180 3.07 3.780 18.00  0  0    3    3
-Cadillac Fleetwood  10.4   8 472.0 205 2.93 5.250 17.98  0  0    3    4
-Lincoln Continental 10.4   8 460.0 215 3.00 5.424 17.82  0  0    3    4
-Chrysler Imperial   14.7   8 440.0 230 3.23 5.345 17.42  0  0    3    4
-Fiat 128            32.4   4  78.7  66 4.08 2.200 19.47  1  1    4    1
-Honda Civic         30.4   4  75.7  52 4.93 1.615 18.52  1  1    4    2
-Toyota Corolla      33.9   4  71.1  65 4.22 1.835 19.90  1  1    4    1
-Toyota Corona       21.5   4 120.1  97 3.70 2.465 20.01  1  0    3    1
-Dodge Challenger    15.5   8 318.0 150 2.76 3.520 16.87  0  0    3    2
-AMC Javelin         15.2   8 304.0 150 3.15 3.435 17.30  0  0    3    2
-Camaro Z28          13.3   8 350.0 245 3.73 3.840 15.41  0  0    3    4
-Pontiac Firebird    19.2   8 400.0 175 3.08 3.845 17.05  0  0    3    2
-Fiat X1-9           27.3   4  79.0  66 4.08 1.935 18.90  1  1    4    1
-Porsche 914-2       26.0   4 120.3  91 4.43 2.140 16.70  0  1    5    2
-Lotus Europa        30.4   4  95.1 113 3.77 1.513 16.90  1  1    5    2
-Ford Pantera L      15.8   8 351.0 264 4.22 3.170 14.50  0  1    5    4
-Ferrari Dino        19.7   6 145.0 175 3.62 2.770 15.50  0  1    5    6
-Maserati Bora       15.0   8 301.0 335 3.54 3.570 14.60  0  1    5    8
-Volvo 142E          21.4   4 121.0 109 4.11 2.780 18.60  1  1    4    2</code></pre>
-</div>
-</div>
+<p>Most of this post, and the bulk of my understanding of this topic, is due to <a href="https://colinfay.me/node-r-package/">Colin Fay’s blog post</a>. This was incredibly helpful for me to keep referencing, and to provide some great context for how to implement this for your own package.</p>
+<p>Instead of re-writing a (worse) version of Colin’s post, I’d 100% recommend reading over it a few times and giving it a shot for your own project. Also, feel free to send me an email 📧 (matthewroumaya@gmail.com) if you’d like to connect and troubleshoot!</p>
 </section>
 </section>
 <section id="what-is-jdenticon" class="level1">
@@ -296,6 +248,58 @@ Volvo 142E          21.4   4 121.0 109 4.11 2.780 18.60  1  1    4    2</code></
 <blockquote class="blockquote">
 <p>An Identicon is a visual representation of a hash value, usually of an IP address, that serves to identify a user of a computer system as a form of avatar while protecting the users’ privacy. <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
 </blockquote>
+<p>If you’ve ever been on StackOverflow, then you know what an identicon is.</p>
+<p>If you make an account, you’ll automatically be given your own individual identicon, which will look something like this <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>:</p>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 16.7%;justify-content: center;">
+<p><img src="jdenticon_100_molly.png" class="img-fluid"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 16.7%;justify-content: center;">
+<p><img src="jdenticon_100_matt.png" class="img-fluid"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 16.7%;justify-content: center;">
+<p><img src="jdenticon_100_mango.png" class="img-fluid"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 16.7%;justify-content: center;">
+<p><img src="jdenticon_100_phil.png" class="img-fluid"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 16.7%;justify-content: center;">
+<p><img src="jdenticon_100_donut.png" class="img-fluid"></p>
+</div>
+</div>
+</div>
+<p>Speaking of StackOverflow, I came across <a href="https://stackoverflow.com/questions/75810349/run-javascript-command-from-within-r-package/75858192#75858192">this question</a> about generating identicons in R using <code>Node.js</code>, and I jumped at the opportunity to use my new knowledge.</p>
+<p>The best way to look at how this package was built and structured is probably to <a href="https://github.com/mattroumaya/jdenticon">check it out on GitHub</a>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1" data-startfrom="68" data-source-offset="-4"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 67;"><span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a>jdenticon <span class="op">=</span> <span class="im">import</span>(<span class="st">'https://cdn.jsdelivr.net/npm/jdenticon@3.2.0/dist/jdenticon.min.js'</span>)</span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a>viewof jd <span class="op">=</span> {</span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span>  text <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">text</span>({</span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>    <span class="dt">label</span><span class="op">:</span> <span class="st">"Jdenticon Value"</span><span class="op">,</span> </span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a>    <span class="dt">value</span><span class="op">:</span> <span class="st">"welcome!"</span><span class="op">,</span></span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a>    <span class="dt">submit</span><span class="op">:</span> <span class="kw">true</span>})</span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="fu">html</span><span class="vs">`</span></span>
+<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a><span class="vs">    &lt;svg width="100" height="100" data-jdenticon-value="</span><span class="sc">${</span>text<span class="sc">}</span><span class="vs">"&gt;&lt;/svg&gt;</span></span>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a><span class="vs">    `</span></span>
+<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</div>
 
 
 </section>
@@ -305,8 +309,20 @@ Volvo 142E          21.4   4 121.0 109 4.11 2.780 18.60  1  1    4    2</code></
 
 <ol>
 <li id="fn1"><p><a href="https://en.wikipedia.org/wiki/Identicon">https://en.wikipedia.org/wiki/Identicon</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>These are visual representations of my family, including our pets Mango, Phil, and Donut. :)<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
+<script type="ojs-module-contents">
+{"contents":[{"methodName":"interpret","cellName":"ojs-cell-1","inline":false,"source":"    jdenticon = import('https://cdn.jsdelivr.net/npm/jdenticon@3.2.0/dist/jdenticon.min.js')\nviewof jd = {\n\nconst  text = Inputs.text({\n    label: \"Jdenticon Value\", \n    value: \"welcome!\",\n    submit: true})\n\n    return html`\n    <svg width=\"100\" height=\"100\" data-jdenticon-value=\"${text}\"></svg>\n    `\n\n}\n\n\n\n"},{"methodName":"interpretQuiet","source":"shinyInput('jd')"}]}
+</script>
+<script type="module">
+if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+window._ojs.paths.runtimeToDoc = "../../posts/jdenticon";
+window._ojs.paths.runtimeToRoot = "../..";
+window._ojs.paths.docToRoot = "../..";
+window._ojs.selfContained = false;
+window._ojs.runtime.interpretFromScriptTags();
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

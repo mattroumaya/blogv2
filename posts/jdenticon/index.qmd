@@ -33,7 +33,9 @@ Since the functions are written in R, there is already built-in customization by
 
 ## How? 
 
+Most of this post, and the bulk of my understanding of this topic, is due to [Colin Fay's blog post](https://colinfay.me/node-r-package/). This was incredibly helpful for me to keep referencing, and to provide some great context for how to implement this for your own package. 
 
+Instead of re-writing a (worse) version of Colin's post, I'd 100% recommend reading over it a few times and giving it a shot for your own project. Also, feel free to send me an email 📧 (matthewroumaya@gmail.com) if you'd like to connect and troubleshoot! 
 
 # What is Jdenticon?
 
@@ -41,8 +43,47 @@ Since the functions are written in R, there is already built-in customization by
 
 > An Identicon is a visual representation of a hash value, usually of an IP address, that serves to identify a user of a computer system as a form of avatar while protecting the users' privacy. [^1]
 
+If you've ever been on StackOverflow, then you know what an identicon is. 
 
+If you make an account, you'll automatically be given your own individual identicon, which will look something like this [^2]:
+
+
+::: {layout-ncol=6}
+![](jdenticon_100_molly.png)
+
+![](jdenticon_100_matt.png)
+
+![](jdenticon_100_mango.png)
+
+![](jdenticon_100_phil.png)
+
+![](jdenticon_100_donut.png)
+:::
+
+Speaking of StackOverflow, I came across [this question](https://stackoverflow.com/questions/75810349/run-javascript-command-from-within-r-package/75858192#75858192) about generating identicons in R using `Node.js`, and I jumped at the opportunity to use my new knowledge. 
+
+The best way to look at how this package was built and structured is probably to [check it out on GitHub](https://github.com/mattroumaya/jdenticon).
+
+```{ojs}
+    jdenticon = import('https://cdn.jsdelivr.net/npm/jdenticon@3.2.0/dist/jdenticon.min.js')
+viewof jd = {
+
+const  text = Inputs.text({
+    label: "Jdenticon Value", 
+    value: "welcome!",
+    submit: true})
+
+    return html`
+    <svg width="100" height="100" data-jdenticon-value="${text}"></svg>
+    `
+
+}
+
+
+
+```
 
 
 
 [^1]: [https://en.wikipedia.org/wiki/Identicon](https://en.wikipedia.org/wiki/Identicon)
+[^2]: These are visual representations of my family, including our pets Mango, Phil, and Donut. :)

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Matt Roumaya">
-<meta name="dcterms.date" content="2023-04-18">
+<meta name="dcterms.date" content="2023-04-29">
 
 <title>matt roumaya</title>
 <style>
@@ -99,9 +99,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <link rel="stylesheet" href="../../styles.css">
+<link rel="stylesheet" href="extra.css">
 <meta name="twitter:title" content="matt roumaya">
 <meta name="twitter:description" content="">
-<meta name="twitter:image" content="main.png">
+<meta name="twitter:image" content="jdenticon_100_molly.png">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -160,13 +161,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Observable Flying Objects</h1>
+      <h1 class="title">Jdenticon for R is on CRAN</h1>
                                 <div class="quarto-categories">
                 <div class="quarto-category">R</div>
-                <div class="quarto-category">Observable</div>
                 <div class="quarto-category">JavaScript</div>
-                <div class="quarto-category">NUFORC</div>
-                <div class="quarto-category">UFO</div>
+                <div class="quarto-category">Node.js</div>
               </div>
                   </div>
   </div>
@@ -184,7 +183,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">April 18, 2023</p>
+        <p class="date">April 29, 2023</p>
       </div>
     </div>
     
@@ -200,9 +199,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#random-ufo-report" id="toc-random-ufo-report" class="nav-link active" data-scroll-target="#random-ufo-report">Random UFO Report</a></li>
-  <li><a href="#nuforc-bot" id="toc-nuforc-bot" class="nav-link" data-scroll-target="#nuforc-bot">NUFORC Bot</a></li>
-  <li><a href="#import-from-observable" id="toc-import-from-observable" class="nav-link" data-scroll-target="#import-from-observable">Import From Observable</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a>
+  <ul class="collapse">
+  <li><a href="#why" id="toc-why" class="nav-link" data-scroll-target="#why">Why?</a></li>
+  <li><a href="#how" id="toc-how" class="nav-link" data-scroll-target="#how">How?</a></li>
+  </ul></li>
+  <li><a href="#what-is-jdenticon" id="toc-what-is-jdenticon" class="nav-link" data-scroll-target="#what-is-jdenticon">What is Jdenticon?</a>
+  <ul class="collapse">
+  <li><a href="#how-to" id="toc-how-to" class="nav-link" data-scroll-target="#how-to">How To</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -212,138 +217,110 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<section id="random-ufo-report" class="level1">
-<h1>Random UFO Report</h1>
-<p>tl;dr - 🛸 Refresh the page to see a random UFO report! 🛸</p>
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<p>My colleage Andrew and I have been super interested in combining <code>Node.js</code> and <code>R</code>, especially after coming across a compelling use case that helps us to simplify Firebase data fetching.</p>
+<center>
+<img src="node.png" class="img-fluid" style="width:25.0%">
+</center>
+<p>Read on to learn more about:</p>
 <ul>
-<li><p>Some fields may show as <code>undefined</code> or <code>null</code> because this is a quick write-up and I’m busy! :)</p></li>
-<li><p>If you have any suggestions or would like to get started with Observable, or want to connect in general, definitely <a href="mailto:%20matthewroumaya@gmail.com">email me</a>.</p></li>
+<li>Why you might want to combine <code>Node.js</code> and <code>R</code></li>
+<li>How you might go about combining <code>Node.js</code> and <code>R</code></li>
+<li>What a Jdenticon/identicon is</li>
 </ul>
+<section id="why" class="level2">
+<h2 class="anchored" data-anchor-id="why">Why?</h2>
+<p>Rather than designing a multi-step process that would involve running a query in <code>Node.js</code>, and then sending the data to <code>R</code>, Andrew was able to grab the few functions that we needed directly from the <a href="https://www.npmjs.com/package/firebase">firebase npm package</a>.</p>
+<p>This is huge, because it enables any R user on our team to pull data without knowing any JavaScript at all. The only prerequisite is a <code>Node.js</code> installation that is already setup on our Posit Workbench server.</p>
+<p>Even though we only need to use JavaScript for a few fairly simple queries, there is still quite a bit of a learning curve for anyone who is unfamiliar. Not only is the language different than R, but there are also DevOps considerations like:</p>
+<ul>
+<li>Installing <code>Node.js</code> and using <code>npm</code> to install libraries.</li>
+<li>Managing and securing service account credentials.</li>
+<li>Ensuring maintainability.</li>
+<li>Enabling users to have the ability to customize queries when needed.</li>
+</ul>
+<p>Wrapping all of this functionality into a few R functions solves all of the issues above. As mentioned, <code>Node.js</code> is available for all users on Workbench. Additionally, secure credentials can be permissioned to users that need them, which is safer and less work for everyone.</p>
+<p>Since the functions are written in R, there is already built-in customization by tweaking parameters as needed. Similarly, an R user is much better equipped to maintain an R package, than needing to maintain a <code>Node.js</code> custom query that is ingested by an R package.</p>
+</section>
+<section id="how" class="level2">
+<h2 class="anchored" data-anchor-id="how">How?</h2>
+<p>Most of this post, and the start of my understanding of this topic, is due to <a href="https://colinfay.me/node-r-package/">Colin Fay’s blog post</a>. This was incredibly helpful for me to keep referencing, and to provide some great context for how to implement this for your own package.</p>
+<p>Instead of re-writing a (worse) version of Colin’s post, I’d 100% recommend reading over it a few times and giving it a shot for your own project. Also, feel free to send me an email 📧 (matthewroumaya@gmail.com) if you’d like to connect and troubleshoot!</p>
+</section>
+</section>
+<section id="what-is-jdenticon" class="level1">
+<h1>What is Jdenticon?</h1>
+<p><a href="https://jdenticon.com/">Jdenticon</a> is a <code>Node.js</code> library that generates identicons, which are:</p>
+<blockquote class="blockquote">
+<p>An Identicon is a visual representation of a hash value, usually of an IP address, that serves to identify a user of a computer system as a form of avatar while protecting the users’ privacy. <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+</blockquote>
+<p>If you’ve ever been on Stack Overflow, then you know what an identicon is.</p>
+<p>If you make an account, you’ll automatically be given your own individual identicon, which will look something like this <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>:</p>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 16.7%;justify-content: center;">
+<p><img src="jdenticon_100_molly.png" class="img-fluid"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 16.7%;justify-content: center;">
+<p><img src="jdenticon_100_matt.png" class="img-fluid"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 16.7%;justify-content: center;">
+<p><img src="jdenticon_100_mango.png" class="img-fluid"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 16.7%;justify-content: center;">
+<p><img src="jdenticon_100_phil.png" class="img-fluid"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 16.7%;justify-content: center;">
+<p><img src="jdenticon_100_donut.png" class="img-fluid"></p>
+</div>
+</div>
+</div>
+<p>Speaking of Stack Overflow, I came across <a href="https://stackoverflow.com/questions/75810349/run-javascript-command-from-within-r-package/75858192#75858192">this question</a> about generating identicons in R using <code>Node.js</code>, and I jumped at the opportunity to use my new knowledge.</p>
+<p>The OP’s profile made it easy to find them, so I sent over an email with a minimally working R package. Dr.&nbsp;Morey significantly improved the package with a PR, and I’m grateful to be able to collaborate on a tiny open-source wrapper for a cool little library.</p>
+<p>The best way to look at how this package was built and structured is probably to <a href="https://github.com/mattroumaya/jdenticon">check it out on GitHub</a>.</p>
+<section id="how-to" class="level2">
+<h2 class="anchored" data-anchor-id="how-to">How To</h2>
+<p>To create your own <code>jdenticon</code>, you can run the following in R:</p>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb1" data-startfrom="18" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 17;"><span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>htl<span class="op">.</span><span class="fu">html</span><span class="vs">`&lt;h3 class='header'&gt;&lt;/h3&gt;</span></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="vs"> </span></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;div class="date"&gt;&lt;/div&gt;</span></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="vs"> </span></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;div class="shape"&gt;&lt;/div&gt;</span></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="vs"> </span></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;div class="duration"&gt;&lt;/div&gt;</span></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;br&gt;</span></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="vs"> </span></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;a class="report-link"&gt;Link to Report&lt;/a&gt;</span></span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="vs"> </span></span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;br&gt;</span></span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="vs"> </span></span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;a class="raw-link"&gt;Link to Image&lt;/a&gt;</span></span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="vs"> </span></span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;br&gt;</span></span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="vs"> </span></span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;br&gt;</span></span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="vs"> </span></span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;div class="summary"&gt;&lt;/div&gt;</span></span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="vs"> </span></span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;img id="ufo-img" style="height: 500px"&gt;</span></span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="vs"> </span></span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;br&gt;`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(jdenticon) </span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>jdenticon<span class="sc">::</span><span class="fu">jdenticon</span>(</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">value =</span> <span class="st">"any_value"</span>, </span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">filePath =</span> here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"posts"</span>, <span class="st">"jdenticon"</span>),  </span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">fileName =</span> <span class="st">"my_jd"</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Then you can use your <code>jdenticon</code>!</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2" data-startfrom="98" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 97;"><span id="cb2-98"><a href="#cb2-98" aria-hidden="true" tabindex="-1"></a><span class="fu">html</span><span class="vs">`&lt;img src="my_jd.png" class="img-jdenticon"&gt;`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-1" data-nodetype="expression">
 
 </div>
 </div>
 </div>
+<p><code>jdenticon</code> is on CRAN, which I might write about in the future. I was surprised at how easy it was to submit for CRAN review, and am hoping to add a few more packages when I have the time.</p>
+<p>If you’re reading this and are curious about using <code>Node.js</code> with <code>R</code>, please reach out!</p>
+
+
 </section>
-<section id="nuforc-bot" class="level1">
-<h1>NUFORC Bot</h1>
-<p>NUFORC Bot is/was a Twitter bot that scrapes UFO sightings data from the <a href="https://armoxon.substack.com/p/the-worlds-smartest-man-doesnt-want">NUFORC Data Bank</a> and tweets out a summary (and image if one was provided). The bot has ~700 followers and not much engagement, but it has definitely been a fun way to learn about web scraping, bot building, and CRON jobs via GitHub Actions (repo is <a href="https://github.com/mattroumaya/mufonbot">here</a>).</p>
-<p>Recently, the <a href="https://armoxon.substack.com/p/the-worlds-smartest-man-doesnt-want">World’s Smartest Man</a> pulled the plug on Twitter’s API access for a wide range of developers, including <a href="https://twitter.com/nuforcbot?lang=en">NUFORC Bot</a>. For some reason, NUFORC Bot is now back up and running, but it seems like it will be short-lived.</p>
-<p>After the hostile takeover, I stopped using my personal account on Twitter, deleted the app, and planned to just let NUFORC Bot ride off into the sunset. Now that the sunset is quickly approaching, I’ve been trying to think of a way to reproduce a similar effect to the tweet using the data I have already collected.</p>
-<p>Having been a subscriber to <a href="https://dailyfinds.hrbrmstr.dev/"><strong>hrbrmstr’s Daily Drop</strong></a> for a while, I’ve seen a ton of amazing Observable notebooks, and thought that this could be a fun project to learn Observable and see . The impending demise of NUFORC Bot was as good an excuse as any to hack together an Observable notebook that can do everything that NUFORC Bot did + MORE 👽.</p>
 </section>
-<section id="import-from-observable" class="level1">
-<h1>Import From Observable</h1>
-<p>It’s kind of amazing how little code is needed to create the random report above.</p>
-<ol type="1">
-<li>Importing two functions from <a href="https://observablehq.com/@mroumaya/random-ufo">my Observable Notebook</a></li>
-<li>Reading data with <code>d3</code>. This could also be done in R but is more concise in a single chunk, and I’m planning to use <a href="https://quarto.org/docs/interactive/ojs/data-sources.html#python-and-r"><code>ojs_define()</code></a> in a later post.</li>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p><a href="https://en.wikipedia.org/wiki/Identicon">https://en.wikipedia.org/wiki/Identicon</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>These identicons are visual representations of my family’s names, including our pets Mango, Phil, and Donut. :)<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2" data-startfrom="67" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 66;"><span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> { selectRandom<span class="op">,</span> addHeader } <span class="im">from</span> <span class="st">"@mroumaya/random-ufo"</span></span>
-<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a>ufoReport <span class="op">=</span> d3<span class="op">.</span><span class="fu">csv</span>(<span class="st">'https://raw.githubusercontent.com/mattroumaya/mufonbot/master/data_raw/links.csv'</span>)</span>
-<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a>ufo <span class="op">=</span> <span class="fu">addHeader</span>(<span class="fu">selectRandom</span>(ufoReport))<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<div>
-<div id="ojs-cell-2-1" data-nodetype="declaration">
-
-</div>
-</div>
-</div>
-<div class="cell-output cell-output-display">
-<div>
-<div id="ojs-cell-2-2" data-nodetype="declaration">
-
-</div>
-</div>
-</div>
-<div class="cell-output cell-output-display">
-<div>
-<div id="ojs-cell-2-3" data-nodetype="declaration">
-
-</div>
-</div>
-</div>
-</div>
-<ol start="3" type="1">
-<li>The only other code that’s needed is some HTML to display the NUFORC report data. Observable has a Hypertext Literal implementation that I definitely didn’t leverage correctly, but looks like this:</li>
-</ol>
-<div class="cell" data-eval="false">
-<div class="sourceCode cell-code" id="cb3" data-startfrom="77" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 76;"><span id="cb3-77"><a href="#cb3-77" aria-hidden="true" tabindex="-1"></a>htl<span class="op">.</span><span class="fu">html</span><span class="vs">`&lt;h3 class='header'&gt;&lt;/h3&gt;</span></span>
-<span id="cb3-78"><a href="#cb3-78" aria-hidden="true" tabindex="-1"></a><span class="vs"> </span></span>
-<span id="cb3-79"><a href="#cb3-79" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;div class="date"&gt;&lt;/div&gt;</span></span>
-<span id="cb3-80"><a href="#cb3-80" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-81"><a href="#cb3-81" aria-hidden="true" tabindex="-1"></a><span class="vs"> </span></span>
-<span id="cb3-82"><a href="#cb3-82" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;div class="shape"&gt;&lt;/div&gt;</span></span>
-<span id="cb3-83"><a href="#cb3-83" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-84"><a href="#cb3-84" aria-hidden="true" tabindex="-1"></a><span class="vs"> </span></span>
-<span id="cb3-85"><a href="#cb3-85" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;div class="duration"&gt;&lt;/div&gt;</span></span>
-<span id="cb3-86"><a href="#cb3-86" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-87"><a href="#cb3-87" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;br&gt;</span></span>
-<span id="cb3-88"><a href="#cb3-88" aria-hidden="true" tabindex="-1"></a><span class="vs"> </span></span>
-<span id="cb3-89"><a href="#cb3-89" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;a class="report-link"&gt;Link to Report&lt;/a&gt;</span></span>
-<span id="cb3-90"><a href="#cb3-90" aria-hidden="true" tabindex="-1"></a><span class="vs"> </span></span>
-<span id="cb3-91"><a href="#cb3-91" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;br&gt;</span></span>
-<span id="cb3-92"><a href="#cb3-92" aria-hidden="true" tabindex="-1"></a><span class="vs"> </span></span>
-<span id="cb3-93"><a href="#cb3-93" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;a class="raw-link"&gt;Link to Image&lt;/a&gt;</span></span>
-<span id="cb3-94"><a href="#cb3-94" aria-hidden="true" tabindex="-1"></a><span class="vs"> </span></span>
-<span id="cb3-95"><a href="#cb3-95" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;br&gt;</span></span>
-<span id="cb3-96"><a href="#cb3-96" aria-hidden="true" tabindex="-1"></a><span class="vs"> </span></span>
-<span id="cb3-97"><a href="#cb3-97" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;br&gt;</span></span>
-<span id="cb3-98"><a href="#cb3-98" aria-hidden="true" tabindex="-1"></a><span class="vs"> </span></span>
-<span id="cb3-99"><a href="#cb3-99" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;div class="summary"&gt;&lt;/div&gt;</span></span>
-<span id="cb3-100"><a href="#cb3-100" aria-hidden="true" tabindex="-1"></a><span class="vs"> </span></span>
-<span id="cb3-101"><a href="#cb3-101" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;img id="ufo-img" style="height: 500px"&gt;</span></span>
-<span id="cb3-102"><a href="#cb3-102" aria-hidden="true" tabindex="-1"></a><span class="vs"> </span></span>
-<span id="cb3-103"><a href="#cb3-103" aria-hidden="true" tabindex="-1"></a><span class="vs">&lt;br&gt;`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<div id="ojs-cell-3" data-nodetype="expression">
-
-</div>
-</div>
-</div>
-
-
-</section>
-
-</main> <!-- /main -->
+</section></div></main> <!-- /main -->
 <script type="ojs-module-contents">
-{"contents":[{"methodName":"interpret","cellName":"ojs-cell-1","inline":false,"source":" \nhtl.html`<h3 class='header'></h3>\n \n<div class=\"date\"></div>\n\n \n<div class=\"shape\"></div>\n\n \n<div class=\"duration\"></div>\n\n<br>\n \n<a class=\"report-link\">Link to Report</a>\n \n<br>\n \n<a class=\"raw-link\">Link to Image</a>\n \n<br>\n \n<br>\n \n<div class=\"summary\"></div>\n \n<img id=\"ufo-img\" style=\"height: 500px\">\n \n<br>`\n"},{"methodName":"interpret","cellName":"ojs-cell-2","inline":false,"source":"import { selectRandom, addHeader } from \"@mroumaya/random-ufo\"\n \nufoReport = d3.csv('https://raw.githubusercontent.com/mattroumaya/mufonbot/master/data_raw/links.csv')\n \nufo = addHeader(selectRandom(ufoReport));\n"}]}
+{"contents":[{"methodName":"interpret","cellName":"ojs-cell-1","inline":false,"source":"html`<img src=\"my_jd.png\" class=\"img-jdenticon\">`\n"}]}
 </script>
 <script type="module">
 if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
-window._ojs.paths.runtimeToDoc = "../../posts/observable-flying-objects";
+window._ojs.paths.runtimeToDoc = "../../posts/jdenticon";
 window._ojs.paths.runtimeToRoot = "../..";
 window._ojs.paths.docToRoot = "../..";
 window._ojs.selfContained = false;

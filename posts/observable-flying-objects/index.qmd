@@ -12,7 +12,7 @@ tl;dr - 🛸 Refresh the page to see a random UFO report! 🛸
 
 -   Some fields may show as `undefined` or `null` because this is a quick write-up and I'm busy! :)
 
--   If you have any suggestions or would like to get started with Observable, or want to connect in general, definitely [email me](mailto: matthewroumaya@gmail.com).
+-   If you have any suggestions or would like to get started with Observable, or want to connect in general, definitely [email me](mailto:%20matthewroumaya@gmail.com).
 
 ```{ojs}
 //| echo: false

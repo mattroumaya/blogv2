@@ -1,0 +1,8 @@
+---
+title: "Good Statistical Monitoring R Package"
+categories: [R, R package, open source]
+---
+
+The [{gsm} package](https://github.com/Gilead-BioStats/gsm) provides a standardized workflow that leverages Key Risk Indicators (KRIs) and thresholds to conduct study-level Risk Based Monitoring (RBM) for clinical trials. I have been privileged to work with an amazing team of developers from Atorus and Gilead, and have made contributions to this project since January 2022.
+
+[![](/inst/img/projects/gsm.jpg){fig-alt="The word GOOD"}](https://github.com/Gilead-BioStats/gsm)

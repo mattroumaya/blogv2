@@ -16,6 +16,7 @@
   {
     "listing": "/projects.html",
     "items": [
+      "/projects/gsm.html",
       "/projects/nuforcbot.html",
       "/projects/phillymetal.html",
       "/projects/phillymetaldata.html",

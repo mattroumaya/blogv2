@@ -70,9 +70,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-author',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-date","listing-title","listing-author"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -95,8 +95,7 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="styles.css">
 <meta name="twitter:title" content="matt roumaya">
-<meta name="twitter:image" content="./posts/jdenticon/jdenticon_100_molly.png">
-<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:card" content="summary">
 </head>
 
 <body class="nav-fixed">
@@ -156,7 +155,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(9)</span></div><div class="category" data-category="JavaScript">JavaScript <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Microsoft Access">Microsoft Access <span class="quarto-category-count">(1)</span></div><div class="category" data-category="NUFORC">NUFORC <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Node.js">Node.js <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Observable">Observable <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R">R <span class="quarto-category-count">(9)</span></div><div class="category" data-category="R package">R package <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RMarkdown">RMarkdown <span class="quarto-category-count">(1)</span></div><div class="category" data-category="SurveyMonkey">SurveyMonkey <span class="quarto-category-count">(2)</span></div><div class="category" data-category="UFO">UFO <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cats">cats <span class="quarto-category-count">(2)</span></div><div class="category" data-category="dataviz">dataviz <span class="quarto-category-count">(1)</span></div><div class="category" data-category="metal">metal <span class="quarto-category-count">(1)</span></div><div class="category" data-category="reporting">reporting <span class="quarto-category-count">(1)</span></div><div class="category" data-category="snippet">snippet <span class="quarto-category-count">(1)</span></div><div class="category" data-category="survey">survey <span class="quarto-category-count">(2)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(10)</span></div><div class="category" data-category="JavaScript">JavaScript <span class="quarto-category-count">(2)</span></div><div class="category" data-category="MailerLite">MailerLite <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Microsoft Access">Microsoft Access <span class="quarto-category-count">(1)</span></div><div class="category" data-category="NUFORC">NUFORC <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Node.js">Node.js <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Observable">Observable <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R">R <span class="quarto-category-count">(9)</span></div><div class="category" data-category="R package">R package <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RMarkdown">RMarkdown <span class="quarto-category-count">(1)</span></div><div class="category" data-category="SurveyMonkey">SurveyMonkey <span class="quarto-category-count">(2)</span></div><div class="category" data-category="UFO">UFO <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cats">cats <span class="quarto-category-count">(2)</span></div><div class="category" data-category="cli tool">cli tool <span class="quarto-category-count">(1)</span></div><div class="category" data-category="dataviz">dataviz <span class="quarto-category-count">(1)</span></div><div class="category" data-category="metal">metal <span class="quarto-category-count">(2)</span></div><div class="category" data-category="reporting">reporting <span class="quarto-category-count">(1)</span></div><div class="category" data-category="snippet">snippet <span class="quarto-category-count">(1)</span></div><div class="category" data-category="survey">survey <span class="quarto-category-count">(2)</span></div></div></div>
 <!-- main -->
 <main class="content column-page-left" id="quarto-document-content">
 
@@ -181,21 +180,21 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
 <div class="listing-actions-group">
    <div class="input-group input-group-sm quarto-listing-sort">
      <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
      <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
        <option value="" disabled="" selected="" hidden="">Order By</option>
        <option value="index" data-direction="asc">Default</option>
-         <option value="listing-title" data-direction="asc">
-          Title
-        </option>
          <option value="listing-date-sort" data-direction="asc">
           Date - Oldest
         </option>
          <option value="listing-date-sort" data-direction="desc">
           Date - Newest
+        </option>
+         <option value="listing-title-sort" data-direction="asc">
+          Title
         </option>
          <option value="listing-author" data-direction="asc">
           Author
@@ -207,380 +206,135 @@ ul.task-list li input[type="checkbox"] {
       <input type="text" class="search form-control" placeholder="Filter">
     </div>
 </div>
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="R,JavaScript,Node.js" data-listing-date-sort="1682740800000" data-listing-file-modified-sort="1692628388048" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
-<div class="thumbnail">
-<p><a href="./posts/jdenticon/index.html"> <img src="./posts/jdenticon/jdenticon_100_molly.png" class="thumbnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/jdenticon/index.html">
-<h3 class="no-anchor listing-title">
-Jdenticon for R is on CRAN
-</h3>
-<div class="listing-subtitle">
 
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
-R
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('JavaScript'); return false;">
-JavaScript
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Node.js'); return false;">
-Node.js
-</div>
-</div>
-<a href="./posts/jdenticon/index.html">
-<div class="listing-description">
-My colleage Andrew and I have been super interested in combining <code>Node.js</code> and <code>R</code>…
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/jdenticon/index.html">
-<div class="listing-date">
-Apr 29, 2023
-</div>
-<div class="listing-author">
-Matt Roumaya
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="R,Observable,JavaScript,NUFORC,UFO" data-listing-date-sort="1681790400000" data-listing-file-modified-sort="1692628388059" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
-<div class="thumbnail">
-<p><a href="./posts/observable-flying-objects/index.html"> <img src="./posts/observable-flying-objects/main.png" class="thumbnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/observable-flying-objects/index.html">
-<h3 class="no-anchor listing-title">
-Observable Flying Objects
-</h3>
-<div class="listing-subtitle">
+<table class="quarto-listing-table table">
+<thead>
+<tr>
+<th>
+<a class="sort" data-sort="listing-date-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Date</a>
+</th>
+<th>
+<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Title</a>
+</th>
+<th>
+<a class="sort" data-sort="listing-author" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Author</a>
+</th>
+</tr>
+</thead>
+<tbody class="list">
+<tr data-index="0" data-categories="Node.js,metal,cli tool,MailerLite" data-listing-date-sort="1711080000000" data-listing-file-modified-sort="1711085469889" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-title-sort="How I Use MailerLite Send a Newsletter (For Free)" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">3/22/24</span>
+</td>
+<td>
+<a href="./posts/how-i-use-mailerlite/index.html" class="title listing-title">How I Use MailerLite Send a Newsletter (For Free)</a>
+</td>
+<td>
+<span class="listing-author">Matt Roumaya</span>
+</td>
+</tr>
+<tr data-index="1" data-categories="R,JavaScript,Node.js" data-listing-date-sort="1682740800000" data-listing-file-modified-sort="1692628388048" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-title-sort="Jdenticon for R is on CRAN" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">4/29/23</span>
+</td>
+<td>
+<a href="./posts/jdenticon/index.html" class="title listing-title">Jdenticon for R is on CRAN</a>
+</td>
+<td>
+<span class="listing-author">Matt Roumaya</span>
+</td>
+</tr>
+<tr data-index="2" data-categories="R,Observable,JavaScript,NUFORC,UFO" data-listing-date-sort="1681790400000" data-listing-file-modified-sort="1692628388059" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-title-sort="Observable Flying Objects" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">4/18/23</span>
+</td>
+<td>
+<a href="./posts/observable-flying-objects/index.html" class="title listing-title">Observable Flying Objects</a>
+</td>
+<td>
+<span class="listing-author">Matt Roumaya</span>
+</td>
+</tr>
+<tr data-index="3" data-categories="R,R package,metal" data-listing-date-sort="1666411200000" data-listing-file-modified-sort="1666495700678" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-title-sort="phillymetaldata R package" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">10/22/22</span>
+</td>
+<td>
+<a href="./posts/phillymetal/index.html" class="title listing-title">phillymetaldata R package</a>
+</td>
+<td>
+<span class="listing-author">Matt Roumaya</span>
+</td>
+</tr>
+<tr data-index="4" data-categories="R,snippet" data-listing-date-sort="1646456400000" data-listing-file-modified-sort="1665629811527" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-title-sort="A Sort(a) Useful Trick" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">3/5/22</span>
+</td>
+<td>
+<a href="./posts/sorta/index.html" class="title listing-title">A Sort(a) Useful Trick</a>
+</td>
+<td>
+<span class="listing-author">Matt Roumaya</span>
+</td>
+</tr>
+<tr data-index="5" data-categories="R,reporting,RMarkdown,Microsoft Access" data-listing-date-sort="1625803200000" data-listing-file-modified-sort="1665629838917" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-title-sort="Using {foreach} to Speed up Parameterized RMarkdown PDF Report" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">7/9/21</span>
+</td>
+<td>
+<a href="./posts/parameterized-reports/index.html" class="title listing-title">Using {foreach} to Speed up Parameterized RMarkdown PDF Report</a>
+</td>
+<td>
+<span class="listing-author">Matt Roumaya</span>
+</td>
+</tr>
+<tr data-index="6" data-categories="R,cats" data-listing-date-sort="1613365200000" data-listing-file-modified-sort="1665629432139" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-title-sort="52 Different Ways to Rename a Column in R" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">2/15/21</span>
+</td>
+<td>
+<a href="./posts/rename-columns/index.html" class="title listing-title">52 Different Ways to Rename a Column in R</a>
+</td>
+<td>
+<span class="listing-author">Matt Roumaya</span>
+</td>
+</tr>
+<tr data-index="7" data-categories="R,survey,SurveyMonkey" data-listing-date-sort="1595649600000" data-listing-file-modified-sort="1665629728429" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-title-sort="doubleheadR" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">7/25/20</span>
+</td>
+<td>
+<a href="./posts/doubleheadR/index.html" class="title listing-title">doubleheadR</a>
+</td>
+<td>
+<span class="listing-author">Matt Roumaya</span>
+</td>
+</tr>
+<tr data-index="8" data-categories="R,survey,SurveyMonkey" data-listing-date-sort="1588392000000" data-listing-file-modified-sort="1665629726251" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-title-sort="Tidying The Survey Monkey Doubleheader" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">5/2/20</span>
+</td>
+<td>
+<a href="./posts/dealing-with-doubleheadr/index.html" class="title listing-title">Tidying The Survey Monkey Doubleheader</a>
+</td>
+<td>
+<span class="listing-author">Matt Roumaya</span>
+</td>
+</tr>
+<tr data-index="9" data-categories="R,dataviz,cats" data-listing-date-sort="1587873600000" data-listing-file-modified-sort="1665626017646" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-title-sort="Infinite Rummy in the Age of Quarantine" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">4/26/20</span>
+</td>
+<td>
+<a href="./posts/rummy/index.html" class="title listing-title">Infinite Rummy in the Age of Quarantine</a>
+</td>
+<td>
+<span class="listing-author">Matt Roumaya</span>
+</td>
+</tr>
+</tbody>
 
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
-R
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Observable'); return false;">
-Observable
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('JavaScript'); return false;">
-JavaScript
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('NUFORC'); return false;">
-NUFORC
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('UFO'); return false;">
-UFO
-</div>
-</div>
-<a href="./posts/observable-flying-objects/index.html">
-<div class="listing-description">
-tl;dr - 🛸 Refresh the page to see a random UFO report! 🛸
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/observable-flying-objects/index.html">
-<div class="listing-date">
-Apr 18, 2023
-</div>
-<div class="listing-author">
-Matt Roumaya
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="R,R package,metal" data-listing-date-sort="1666411200000" data-listing-file-modified-sort="1666495700678" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
-<div class="thumbnail">
-<p><a href="./posts/phillymetal/index.html"> <p class="card-img-top"><img src="inst/img/projects/phillymetaldata.png" alt="phillymetaldata R package hex logo"  class="thumbnail-image card-img"/></p> </a></p>
-</div>
-<div class="body">
-<a href="./posts/phillymetal/index.html">
-<h3 class="no-anchor listing-title">
-phillymetaldata R package
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
-R
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('R package'); return false;">
-R package
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('metal'); return false;">
-metal
-</div>
-</div>
-<a href="./posts/phillymetal/index.html">
-<div class="listing-description">
-In April 2022, I launched phillymetal.net as a way to stay connected to the local music scene that I’ve rarely engaged with since COVID-19 ruined everything.
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/phillymetal/index.html">
-<div class="listing-date">
-Oct 22, 2022
-</div>
-<div class="listing-author">
-Matt Roumaya
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="R,snippet" data-listing-date-sort="1646456400000" data-listing-file-modified-sort="1665629811527" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-<div class="thumbnail">
-<p><a href="./posts/sorta/index.html"> <img src="./posts/sorta/image.jpeg" class="thumbnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/sorta/index.html">
-<h3 class="no-anchor listing-title">
-A Sort(a) Useful Trick
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
-R
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('snippet'); return false;">
-snippet
-</div>
-</div>
-<a href="./posts/sorta/index.html">
-<div class="listing-description">
-My blog is depressingly stagnant and I want to make more of an effort to just post things without putting too much thought into it.
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/sorta/index.html">
-<div class="listing-date">
-Mar 5, 2022
-</div>
-<div class="listing-author">
-Matt Roumaya
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="R,reporting,RMarkdown,Microsoft Access" data-listing-date-sort="1625803200000" data-listing-file-modified-sort="1665629838917" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
-<div class="thumbnail">
-<p><a href="./posts/parameterized-reports/index.html"> <p class="card-img-top"><img src="posts/parameterized-reports/ms-access.jpg"  class="thumbnail-image card-img"/></p> </a></p>
-</div>
-<div class="body">
-<a href="./posts/parameterized-reports/index.html">
-<h3 class="no-anchor listing-title">
-Using {foreach} to Speed up Parameterized RMarkdown PDF Report
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
-R
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('reporting'); return false;">
-reporting
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('RMarkdown'); return false;">
-RMarkdown
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Microsoft Access'); return false;">
-Microsoft Access
-</div>
-</div>
-<a href="./posts/parameterized-reports/index.html">
-<div class="listing-description">
-Recently, I have been working on a project to find alternate methods for creating PDF score reports for assessments that have typically been made using…
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/parameterized-reports/index.html">
-<div class="listing-date">
-Jul 9, 2021
-</div>
-<div class="listing-author">
-Matt Roumaya
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="R,cats" data-listing-date-sort="1613365200000" data-listing-file-modified-sort="1665629432139" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8">
-<div class="thumbnail">
-<p><a href="./posts/rename-columns/index.html"> <p class="card-img-top"><img src="posts/rename-columns/missyelliot.jpg"  class="thumbnail-image card-img"/></p> </a></p>
-</div>
-<div class="body">
-<a href="./posts/rename-columns/index.html">
-<h3 class="no-anchor listing-title">
-52 Different Ways to Rename a Column in R
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
-R
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('cats'); return false;">
-cats
-</div>
-</div>
-<a href="./posts/rename-columns/index.html">
-<div class="listing-description">
-I haven’t posted for a while, and came across a tweet from Angie Jones that I really related to.
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/rename-columns/index.html">
-<div class="listing-date">
-Feb 15, 2021
-</div>
-<div class="listing-author">
-Matt Roumaya
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="6" data-categories="R,survey,SurveyMonkey" data-listing-date-sort="1595649600000" data-listing-file-modified-sort="1665629728429" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5">
-<div class="thumbnail">
-<p><a href="./posts/doubleheadR/index.html"> <p class="card-img-top"><img src="posts/doubleheadR/the_heads.jpg"  class="thumbnail-image card-img"/></p> </a></p>
-</div>
-<div class="body">
-<a href="./posts/doubleheadR/index.html">
-<h3 class="no-anchor listing-title">
-doubleheadR
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
-R
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('survey'); return false;">
-survey
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('SurveyMonkey'); return false;">
-SurveyMonkey
-</div>
-</div>
-<a href="./posts/doubleheadR/index.html">
-<div class="listing-description">
-The past few months of work-life have been constantly busy with survey design and analysis. COVID has really changed the…
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/doubleheadR/index.html">
-<div class="listing-date">
-Jul 25, 2020
-</div>
-<div class="listing-author">
-Matt Roumaya
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="7" data-categories="R,survey,SurveyMonkey" data-listing-date-sort="1588392000000" data-listing-file-modified-sort="1665629726251" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5">
-<div class="thumbnail">
-<p><a href="./posts/dealing-with-doubleheadr/index.html"> <img src="./posts/dealing-with-doubleheadr/image.png" class="thumbnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/dealing-with-doubleheadr/index.html">
-<h3 class="no-anchor listing-title">
-Tidying The Survey Monkey Doubleheader
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
-R
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('survey'); return false;">
-survey
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('SurveyMonkey'); return false;">
-SurveyMonkey
-</div>
-</div>
-<a href="./posts/dealing-with-doubleheadr/index.html">
-<div class="listing-description">
-SurveyMonkey 🐒 is a popular online survey…
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/dealing-with-doubleheadr/index.html">
-<div class="listing-date">
-May 2, 2020
-</div>
-<div class="listing-author">
-Matt Roumaya
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="8" data-categories="R,dataviz,cats" data-listing-date-sort="1587873600000" data-listing-file-modified-sort="1665626017646" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5">
-<div class="thumbnail">
-<p><a href="./posts/rummy/index.html"> <p class="card-img-top"><img src="posts/rummy/IMG-2914.jpg"  class="thumbnail-image card-img"/></p> </a></p>
-</div>
-<div class="body">
-<a href="./posts/rummy/index.html">
-<h3 class="no-anchor listing-title">
-Infinite Rummy in the Age of Quarantine
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
-R
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('dataviz'); return false;">
-dataviz
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('cats'); return false;">
-cats
-</div>
-</div>
-<a href="./posts/rummy/index.html">
-<div class="listing-description">
-In these <em>unprecedented times</em>, my wife Molly and I have been playing infinite rounds of Rummy ♠️ ♥️ ♣️ ♦️. Since I don’t have any high-quality posts yet (and probably won’t any time soon💩), I’m just…
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/rummy/index.html">
-<div class="listing-date">
-Apr 26, 2020
-</div>
-<div class="listing-author">
-Matt Roumaya
-</div>
-</a>
-</div>
-</div>
-</div>
+</table>
 <div class="listing-no-matching d-none">
 No matching items
 </div>

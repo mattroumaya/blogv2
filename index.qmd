@@ -3,10 +3,11 @@ title: "blog"
 listing:
   contents: posts
   sort: "date desc"
-  type: default
+  type: table
   categories: true
   sort-ui: true
   filter-ui: true
+  date-format: "short"
 page-layout: full
 title-block-banner: false
 ---

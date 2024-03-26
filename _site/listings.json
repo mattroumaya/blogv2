@@ -2,6 +2,11 @@
   {
     "listing": "/index.html",
     "items": [
+<<<<<<< Updated upstream
+=======
+      "/posts/setting-up-postgresql/index.html",
+      "/posts/how-i-use-mailerlite/index.html",
+>>>>>>> Stashed changes
       "/posts/jdenticon/index.html",
       "/posts/observable-flying-objects/index.html",
       "/posts/phillymetal/index.html",
